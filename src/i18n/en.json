@@ -45,7 +45,7 @@
       "domain": "demofiestamaniamockdata.vercel.app",
       "problem": "Operations needed to scale during campaigns and peak seasons without checkout failures or slowdowns.",
       "solution": "Built with Next.js, PostgreSQL, and Prisma, plus layered caching, smart prefetching, and optimized critical queries.",
-      "results": "Stable checkout under high peaks ? Fast navigation ? Solid foundation for growth",
+      "results": "Stable checkout under high peaks · Fast navigation · Solid foundation for growth",
       "tech": "Next.js, PostgreSQL, Prisma, TypeScript, Vercel",
       "link": "https://demofiestamaniamockdata.vercel.app/",
       "image": "/projects/01-ecommerce.webp"
@@ -56,7 +56,7 @@
       "domain": "Private preview",
       "problem": "Writers were losing time searching for background and connections between actors, events, and publications.",
       "solution": "Crawling and semantic enrichment pipeline that generates relationship graphs, timelines, related content, and SEO suggestions.",
-      "results": "Faster research ? Better context per article ? Assisted editorial workflow",
+      "results": "Faster research · Better context per article · Assisted editorial workflow",
       "tech": "Node.js, NLP, Graph DB, SEO tooling",
       "image": "/projects/02-contexto-periodistas.webp"
     },
@@ -66,7 +66,7 @@
       "domain": "Private preview",
       "problem": "The existing portal was slow, and the editorial team needed to keep their usual WordPress publishing flow.",
       "solution": "Headless architecture: content served from WordPress and frontend rebuilt with Astro, prioritizing performance and operational continuity.",
-      "results": "Improved load time ? Same editorial workflow ? Better UX",
+      "results": "Improved load time · Same editorial workflow · Better UX",
       "tech": "Astro, WordPress Headless, REST API, JavaScript",
       "image": "/projects/03-astro-wordpress.webp"
     },
@@ -76,7 +76,7 @@
       "domain": "pigasus.com.co",
       "problem": "The business needed full digital order flow: payment, internal processing, and user tracking.",
       "solution": "WordPress commerce setup with payment gateway integration, direct kitchen order routing, and order status tracker.",
-      "results": "Centralized orders ? Less operational friction ? Better customer visibility",
+      "results": "Centralized orders · Less operational friction · Better customer visibility",
       "tech": "WordPress, WooCommerce, Payment Gateway, Integrations",
       "link": "https://pigasus.com.co/",
       "image": "/projects/04-pigasus.webp"
@@ -87,7 +87,7 @@
       "domain": "Private preview",
       "problem": "The finance team spent 8 hours daily building Excel reports with high risk of human error.",
       "solution": "RPA bot with Power Automate and Rocketbot that extracts, processes, validates, and generates reports automatically.",
-      "results": "8h process ? 15 min ? 100% accuracy",
+      "results": "8h process → 15 min · 100% accuracy",
       "tech": "Power Automate, Rocketbot, Excel API, SQL Server, Python",
       "image": "/projects/05-proyecto-actual.webp"
     },
@@ -97,7 +97,7 @@
       "domain": "elcolombiano.com",
       "problem": "Need to build functional solutions with limited resources while strengthening core technical foundations through real projects.",
       "solution": "Continuous delivery of sites and digital specials with a practical mindset, improving web structure and implementation quality over time.",
-      "results": "Strong technical foundation ? Visible professional growth ? High learning volume",
+      "results": "Strong technical foundation · Visible professional growth · High learning volume",
       "tech": "WordPress, HTML, CSS, JavaScript",
       "link": "https://www.elcolombiano.com/especialesmarcasaliadas/",
       "image": "/projects/06-internos.webp"
