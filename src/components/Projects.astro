@@ -6,11 +6,23 @@ interface Props {
   lang: Lang;
 }
 
+interface Project {
+  title: string;
+  description: string;
+  domain: string;
+  problem: string;
+  solution: string;
+  results: string;
+  tech: string;
+  link?: string;
+  image?: string;
+}
+
 const { lang } = Astro.props;
 const i18n = getTranslations(lang);
 const p = i18n.projects;
 
-const projects = [
+const fallbackProjects: Project[] = [
   p.project1,
   p.project2,
   p.project3,
@@ -18,6 +30,89 @@ const projects = [
   p.project5,
   p.project6,
 ];
+
+const featuredEsProjects: Project[] = [
+  {
+    title: 'Plataforma E-commerce',
+    description:
+      'Tienda online de alto rendimiento con arquitectura headless capaz de manejar grandes picos de tráfico.',
+    domain: 'demofiestamaniamockdata.vercel.app',
+    problem:
+      'La operación necesitaba escalar durante campañas y fechas especiales sin caídas ni bloqueos en checkout.',
+    solution:
+      'Implementación con Next.js, PostgreSQL y Prisma, más caching por capas, prefetch inteligente y optimización de consultas críticas.',
+    results: 'Checkout estable en picos altos · Navegación rápida · Base sólida para crecimiento',
+    tech: 'Next.js, PostgreSQL, Prisma, TypeScript, Vercel',
+    link: 'https://demofiestamaniamockdata.vercel.app/',
+    image: '/projects/01-ecommerce.webp',
+  },
+  {
+    title: 'Generador de contexto para periodistas',
+    description:
+      'Crawler para medios de comunicación que construye contexto editorial para redactores con enfoque de investigación.',
+    domain: 'Preview privado',
+    problem:
+      'El redactor perdía tiempo buscando antecedentes y conexiones entre actores, hechos y publicaciones.',
+    solution:
+      'Pipeline de crawling y enriquecimiento semántico que genera grafo de relaciones, timeline, relacionados y propuestas SEO.',
+    results: 'Investigación más rápida · Mayor contexto por nota · Flujo editorial asistido',
+    tech: 'Node.js, NLP, Graph DB, SEO tooling',
+    image: '/projects/02-contexto-periodistas.webp',
+  },
+  {
+    title: 'Astro + WordPress Headless',
+    description:
+      'Renovación de portal WordPress manteniendo wp-admin para el equipo editorial y migrando el frontend a una experiencia veloz.',
+    domain: 'Preview privado',
+    problem:
+      'El portal existente era lento y el equipo no quería perder el flujo habitual de publicación en WordPress.',
+    solution:
+      'Arquitectura headless: contenido desde WordPress y frontend en Astro, priorizando rendimiento y continuidad operativa.',
+    results: 'Mejor tiempo de carga · Misma operación editorial · UX más moderna',
+    tech: 'Astro, WordPress Headless, REST API, JavaScript',
+    image: '/projects/03-astro-wordpress.webp',
+  },
+  {
+    title: 'Pigasus',
+    description:
+      'E-commerce para restaurante en Medellín con operación conectada desde pago hasta preparación en cocina.',
+    domain: 'pigasus.com.co',
+    problem:
+      'Se requería digitalizar pedidos con flujo completo: pago, gestión interna y seguimiento del usuario final.',
+    solution:
+      'Tienda en WordPress con integración de pasarela, enrutamiento interno de pedidos a cocina y tracker de estado.',
+    results: 'Pedidos centralizados · Menos fricción operativa · Mejor visibilidad para cliente',
+    tech: 'WordPress, WooCommerce, Pasarela de pago, Integraciones',
+    link: 'https://pigasus.com.co/',
+    image: '/projects/04-pigasus.webp',
+  },
+  {
+    title: p.project5.title,
+    description: p.project5.description,
+    domain: p.project5.domain,
+    problem: p.project5.problem,
+    solution: p.project5.solution,
+    results: p.project5.results,
+    tech: p.project5.tech,
+    image: '/projects/05-proyecto-actual.webp',
+  },
+  {
+    title: 'Proyectos internos',
+    description:
+      'Colección de proyectos donde empecé: principalmente WordPress, más implementaciones en HTML, CSS y JavaScript.',
+    domain: 'elcolombiano.com',
+    problem:
+      'Necesidad de construir soluciones funcionales con recursos limitados, ganando bases técnicas en proyectos reales.',
+    solution:
+      'Iteración continua de sitios y especiales digitales con enfoque práctico, aprendiendo estructura web y calidad de entrega.',
+    results: 'Base técnica sólida · Evolución profesional visible · Alto volumen de aprendizaje',
+    tech: 'WordPress, HTML, CSS, JavaScript',
+    link: 'https://www.elcolombiano.com/especialesmarcasaliadas/',
+    image: '/projects/06-internos.webp',
+  },
+];
+
+const projects = lang === 'es' ? featuredEsProjects : fallbackProjects;
 
 // Visual themes per project: gradient + icon + glow color
 const themes = [
@@ -94,6 +189,18 @@ const themes = [
 
           <!-- Visual area -->
           <div class="card-visual" style={`background: ${themes[i].gradient}`}>
+            {proj.image && (
+              <>
+                <img
+                  class="card-shot"
+                  src={proj.image}
+                  alt={`${lang === 'es' ? 'Pantallazo de' : 'Screenshot of'} ${proj.title}`}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="card-shot-overlay" aria-hidden="true"></div>
+              </>
+            )}
             <span class="card-icon" aria-hidden="true">{themes[i].icon}</span>
             <div class="card-visual-lines" aria-hidden="true">
               <div class="vl vl-1"></div>
@@ -149,20 +256,26 @@ const themes = [
 
           <!-- CTA button -->
           <div class="card-footer">
-            <a
-              href={`https://${proj.domain}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="card-cta"
-              aria-label={`${lang === 'es' ? 'Ver proyecto' : 'View project'}: ${proj.title}`}
-            >
-              <span class="cta-text">{p.visit}</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                <polyline points="15 3 21 3 21 9"/>
-                <line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
-            </a>
+            {proj.link ? (
+              <a
+                href={proj.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-cta"
+                aria-label={`${lang === 'es' ? 'Ver proyecto' : 'View project'}: ${proj.title}`}
+              >
+                <span class="cta-text">{p.visit}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            ) : (
+              <button class="card-cta card-cta--disabled" type="button" disabled>
+                {lang === 'es' ? 'Preview privado' : 'Private preview'}
+              </button>
+            )}
           </div>
         </article>
       ))}
@@ -277,6 +390,31 @@ const themes = [
     align-items: center;
     justify-content: center;
     overflow: hidden;
+  }
+
+  .card-shot {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1.02);
+    transition: transform 0.4s ease;
+  }
+
+  .card-shot-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.05) 0%,
+      rgba(10, 10, 10, 0.45) 100%
+    );
+  }
+
+  .project-card:hover .card-shot {
+    transform: scale(1.08);
   }
 
   .card-icon {
@@ -537,6 +675,20 @@ const themes = [
 
   .card-cta:hover svg {
     transform: translate(2px, -2px);
+  }
+
+  .card-cta--disabled {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-muted);
+    border: 1px dashed var(--border);
+    cursor: not-allowed;
+    box-shadow: none;
+    letter-spacing: 0.08em;
+  }
+
+  .card-cta--disabled:hover {
+    transform: none;
+    box-shadow: none;
   }
 
   /* === RESPONSIVE === */
