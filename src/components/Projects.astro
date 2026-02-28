@@ -1,0 +1,567 @@
+---
+import type { Lang } from '../i18n/utils';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i18n = getTranslations(lang);
+const p = i18n.projects;
+
+const projects = [
+  p.project1,
+  p.project2,
+  p.project3,
+  p.project4,
+  p.project5,
+  p.project6,
+];
+
+// Visual themes per project: gradient + icon + glow color
+const themes = [
+  {
+    gradient: 'linear-gradient(135deg, #C8102E22 0%, #1D4ED822 100%)',
+    icon: '🛒',
+    accent: '#C8102E',
+    glow: 'rgba(200, 16, 46, 0.25)',
+    border: 'rgba(200, 16, 46, 0.35)',
+  },
+  {
+    gradient: 'linear-gradient(135deg, #1D4ED822 0%, #00D4FF18 100%)',
+    icon: '📊',
+    accent: '#3B82F6',
+    glow: 'rgba(59, 130, 246, 0.25)',
+    border: 'rgba(59, 130, 246, 0.35)',
+  },
+  {
+    gradient: 'linear-gradient(135deg, #F59E0B1A 0%, #C8102E18 100%)',
+    icon: '📡',
+    accent: '#F59E0B',
+    glow: 'rgba(245, 158, 11, 0.25)',
+    border: 'rgba(245, 158, 11, 0.35)',
+  },
+  {
+    gradient: 'linear-gradient(135deg, #10B98118 0%, #1D4ED818 100%)',
+    icon: '🤖',
+    accent: '#10B981',
+    glow: 'rgba(16, 185, 129, 0.25)',
+    border: 'rgba(16, 185, 129, 0.35)',
+  },
+  {
+    gradient: 'linear-gradient(135deg, #8B5CF618 0%, #C8102E18 100%)',
+    icon: '⚙️',
+    accent: '#8B5CF6',
+    glow: 'rgba(139, 92, 246, 0.25)',
+    border: 'rgba(139, 92, 246, 0.35)',
+  },
+  {
+    gradient: 'linear-gradient(135deg, #1D4ED822 0%, #F59E0B1A 100%)',
+    icon: '🏠',
+    accent: '#3B82F6',
+    glow: 'rgba(59, 130, 246, 0.25)',
+    border: 'rgba(59, 130, 246, 0.35)',
+  },
+];
+---
+
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-title-wrapper reveal">
+      <h2 class="section-title">{p.title}</h2>
+      <p class="section-subtitle">
+        {lang === 'es'
+          ? 'Proyectos reales, impacto medible. Cada uno resolvió un problema concreto.'
+          : 'Real projects, measurable impact. Each one solved a concrete problem.'}
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      {projects.map((proj, i) => (
+        <article
+          class="project-card"
+          style={`--card-accent: ${themes[i].accent}; --card-glow: ${themes[i].glow}; --card-border: ${themes[i].border};`}
+        >
+          <!-- Card header: domain badge -->
+          <div class="card-header">
+            <div class="domain-badge">
+              <span class="domain-dot"></span>
+              <span class="domain-text">{proj.domain}</span>
+            </div>
+            <div class="card-number">0{i + 1}</div>
+          </div>
+
+          <!-- Visual area -->
+          <div class="card-visual" style={`background: ${themes[i].gradient}`}>
+            <span class="card-icon" aria-hidden="true">{themes[i].icon}</span>
+            <div class="card-visual-lines" aria-hidden="true">
+              <div class="vl vl-1"></div>
+              <div class="vl vl-2"></div>
+              <div class="vl vl-3"></div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="card-content">
+            <h3 class="card-title">{proj.title}</h3>
+            <p class="card-desc">{proj.description}</p>
+
+            <!-- Key result - prominently highlighted -->
+            <div class="card-result">
+              <span class="result-label">
+                {lang === 'es' ? 'Resultado' : 'Result'}
+              </span>
+              <p class="result-text">{proj.results}</p>
+            </div>
+
+            <!-- Tech stack chips -->
+            <div class="card-tech">
+              {proj.tech.split(', ').map((t: string) => (
+                <span class="tech-chip">{t}</span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Expandable details -->
+          <details class="card-details">
+            <summary class="details-toggle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+              {lang === 'es' ? 'Ver detalles técnicos' : 'View technical details'}
+            </summary>
+            <div class="details-body">
+              <div class="detail-row">
+                <span class="detail-label">
+                  {lang === 'es' ? '⚠ Problema' : '⚠ Problem'}
+                </span>
+                <p>{proj.problem}</p>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">
+                  {lang === 'es' ? '💡 Solución' : '💡 Solution'}
+                </span>
+                <p>{proj.solution}</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- CTA button -->
+          <div class="card-footer">
+            <a
+              href={`https://${proj.domain}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card-cta"
+              aria-label={`${lang === 'es' ? 'Ver proyecto' : 'View project'}: ${proj.title}`}
+            >
+              <span class="cta-text">{p.visit}</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* === GRID LAYOUT === */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 8px;
+  }
+
+  /* === CARD BASE === */
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--card-border);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.5),
+      0 0 30px var(--card-glow);
+    border-color: var(--card-border);
+  }
+
+  .project-card:hover::before {
+    opacity: 1;
+  }
+
+  /* === CARD HEADER === */
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .domain-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  .domain-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--card-accent);
+    flex-shrink: 0;
+    animation: domainPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes domainPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .domain-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+  }
+
+  .project-card:hover .domain-text {
+    color: var(--card-accent);
+  }
+
+  .card-number {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+
+  /* === CARD VISUAL === */
+  .card-visual {
+    position: relative;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .card-icon {
+    font-size: 2.8rem;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 16px var(--card-glow));
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .project-card:hover .card-icon {
+    transform: scale(1.15) rotate(-5deg);
+  }
+
+  /* Decorative lines on visual */
+  .card-visual-lines {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .vl {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 1px;
+    transition: opacity 0.4s ease;
+  }
+
+  .project-card:hover .vl {
+    opacity: 0;
+  }
+
+  .vl-1 {
+    width: 1px;
+    height: 100%;
+    left: 30%;
+  }
+
+  .vl-2 {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+  }
+
+  .vl-3 {
+    width: 1px;
+    height: 100%;
+    right: 30%;
+  }
+
+  /* === CARD CONTENT === */
+  .card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    letter-spacing: 0.04em;
+    color: var(--text-primary);
+    line-height: 1.1;
+    transition: color 0.3s ease;
+  }
+
+  .project-card:hover .card-title {
+    color: var(--card-accent);
+  }
+
+  .card-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  /* === RESULT HIGHLIGHT === */
+  .card-result {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--card-accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 10px 14px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+
+  .project-card:hover .card-result {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--card-border);
+    border-left-color: var(--card-accent);
+  }
+
+  .result-label {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .result-text {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+
+  /* === TECH CHIPS === */
+  .card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tech-chip {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    padding: 3px 9px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .project-card:hover .tech-chip {
+    border-color: var(--card-border);
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  /* === EXPANDABLE DETAILS === */
+  .card-details {
+    border-top: 1px solid var(--border);
+  }
+
+  .details-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 20px;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.3s ease;
+    background: none;
+    text-transform: uppercase;
+  }
+
+  .details-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .details-toggle svg {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .card-details[open] .details-toggle svg {
+    transform: rotate(180deg);
+  }
+
+  .card-details[open] .details-toggle,
+  .details-toggle:hover {
+    color: var(--card-accent);
+  }
+
+  .details-body {
+    padding: 0 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .detail-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .detail-label {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .detail-row p {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* === CTA BUTTON === */
+  .card-footer {
+    padding: 14px 20px;
+    border-top: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.01);
+  }
+
+  .card-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 11px 20px;
+    background: var(--card-accent);
+    color: #fff;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .card-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--card-glow);
+  }
+
+  .card-cta:hover::before {
+    opacity: 1;
+  }
+
+  .card-cta svg {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .card-cta:hover svg {
+    transform: translate(2px, -2px);
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .card-visual {
+      height: 90px;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .card-footer {
+      padding: 12px 16px;
+    }
+  }
+</style>

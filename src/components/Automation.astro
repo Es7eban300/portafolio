@@ -1,0 +1,128 @@
+---
+import type { Lang } from '../i18n/utils';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i18n = getTranslations(lang);
+const auto = i18n.automation;
+
+const capabilities = [
+  { title: auto.n8n_title, desc: auto.n8n_desc, icon: '🔄' },
+  { title: auto.rpa_title, desc: auto.rpa_desc, icon: '🤖' },
+  { title: auto.ai_title, desc: auto.ai_desc, icon: '🧠' },
+];
+
+const impacts = [auto.impact1, auto.impact2, auto.impact3];
+---
+
+<section class="section" id="automation">
+  <div class="container">
+    <h2 class="section-title reveal">{auto.title}</h2>
+    <p class="section-subtitle reveal">{auto.description}</p>
+
+    <div class="auto-grid">
+      {capabilities.map((cap) => (
+        <div class="auto-card card reveal">
+          <span class="auto-icon">{cap.icon}</span>
+          <h3 class="auto-title">{cap.title}</h3>
+          <p class="auto-desc">{cap.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="impact-section reveal">
+      <h3 class="impact-title">{auto.impact_title}</h3>
+      <div class="impact-grid">
+        {impacts.map((impact) => (
+          <div class="impact-item">
+            <div class="impact-line"></div>
+            <p>{impact}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .auto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .auto-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .auto-title {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .auto-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .impact-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 48px;
+  }
+
+  .impact-title {
+    font-size: 1.3rem;
+    margin-bottom: 32px;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .impact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .impact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .impact-line {
+    width: 4px;
+    height: 40px;
+    background: var(--gradient-brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .impact-item p {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .auto-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .impact-section {
+      padding: 32px;
+    }
+  }
+</style>

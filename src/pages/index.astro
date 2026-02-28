@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import TechStack from '../components/TechStack.astro';
+import Projects from '../components/Projects.astro';
+import Automation from '../components/Automation.astro';
+import Experience from '../components/Experience.astro';
+import Contact from '../components/Contact.astro';
+
+const lang = 'es' as const;
+---
+
+<Layout
+  title="Esteban Castro | Frontend Engineer"
+  description="Frontend Engineer building scalable and automated systems. Desarrollo interfaces modernas con React, Astro y automatización con IA."
+  lang={lang}
+>
+  <Hero lang={lang} />
+  <About lang={lang} />
+  <TechStack lang={lang} />
+  <Projects lang={lang} />
+  <Automation lang={lang} />
+  <Experience lang={lang} />
+  <Contact lang={lang} />
+</Layout>
+
+<script>
+  import { initAnimations } from '../scripts/animations';
+  document.addEventListener('DOMContentLoaded', initAnimations);
+</script>

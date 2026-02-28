@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://estebancastro.dev/sitemap-index.xml

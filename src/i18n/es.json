@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "about": "Sobre Mí",
+    "stack": "Stack",
+    "projects": "Proyectos",
+    "automation": "Automatización",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "headline": "Frontend Engineer building scalable and automated systems.",
+    "description": "Desarrollo interfaces modernas, escalables y de alto rendimiento. Combino frontend avanzado con automatización e IA para crear soluciones que generan impacto real.",
+    "cta_projects": "Ver Proyectos",
+    "cta_contact": "Contactar"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "p1": "Soy un Frontend Engineer con experiencia construyendo aplicaciones web complejas en producción. Mi enfoque va más allá del código: diseño arquitecturas escalables, optimizo experiencias de usuario y automatizo procesos para maximizar el impacto.",
+    "p2": "Tengo experiencia sólida en React, Astro, y ecosistemas JavaScript/TypeScript modernos. He liderado el desarrollo frontend de plataformas que manejan miles de usuarios, siempre priorizando performance, accesibilidad y mantenibilidad.",
+    "p3": "Lo que me diferencia es mi capacidad híbrida: combino desarrollo frontend de alto nivel con automatización (n8n, RPA, Power Automate) e integración de IA. Esto me permite construir soluciones completas que resuelven problemas reales de negocio.",
+    "highlight1_title": "Frontend Avanzado",
+    "highlight1_desc": "React, Astro, TypeScript, arquitecturas escalables",
+    "highlight2_title": "UX Mindset",
+    "highlight2_desc": "Diseño centrado en el usuario, performance optimizada",
+    "highlight3_title": "Automatización & IA",
+    "highlight3_desc": "n8n, RPA, Power Automate, integración de IA"
+  },
+  "stack": {
+    "title": "Stack Tecnológico",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "automation": "Automatización",
+    "ai": "IA & Herramientas",
+    "cms": "CMS & Plataformas"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "problem": "Problema",
+    "solution": "Solución",
+    "results": "Resultados",
+    "visit": "Ver Proyecto",
+    "project1": {
+      "title": "Plataforma E-commerce Headless",
+      "description": "Tienda online de alto rendimiento con arquitectura headless capaz de manejar grandes picos de tráfico.",
+      "domain": "ecommerce-pro.vercel.app",
+      "problem": "El cliente necesitaba una tienda online rápida que pudiera manejar picos de tráfico de +10K usuarios simultáneos sin degradación de performance.",
+      "solution": "Arquitectura headless con Astro en el frontend, API REST para el backend, y sistema de caché inteligente con revalidación incremental.",
+      "results": "⚡ Carga de 4.2s → 0.8s · Conversión +35% · CWV verde",
+      "tech": "Astro, React, TypeScript, REST API, CDN, SSG"
+    },
+    "project2": {
+      "title": "Dashboard de Automatización",
+      "description": "Panel de control centralizado para monitorear y gestionar flujos de automatización empresariales en tiempo real.",
+      "domain": "auto-dashboard.netlify.app",
+      "problem": "La empresa gestionaba +50 flujos de automatización sin visibilidad centralizada, causando fallos silenciosos y pérdida de datos.",
+      "solution": "Dashboard en React con visualización en tiempo real, alertas inteligentes y sistema de reinicio automático integrado con n8n API.",
+      "results": "🔥 Detección de fallos -80% · Zero downtime por 6 meses",
+      "tech": "React, TypeScript, n8n API, WebSockets, Chart.js"
+    },
+    "project3": {
+      "title": "CMS Multicanal Inteligente",
+      "description": "Sistema centralizado para gestionar y distribuir contenido en múltiples plataformas simultáneamente.",
+      "domain": "cms-multicanal.app",
+      "problem": "El equipo de contenido actualizaba manualmente 4 plataformas diferentes, consumiendo más de 20 horas semanales.",
+      "solution": "Frontend React centralizado con automatizaciones n8n que distribuyen contenido a WordPress, Shopify y redes sociales automáticamente.",
+      "results": "🚀 De 20h → 3h semanales · Cero errores de sincronización",
+      "tech": "React, n8n, WordPress API, Shopify API, Node.js"
+    },
+    "project4": {
+      "title": "Bot WhatsApp con IA",
+      "description": "Asistente conversacional inteligente integrado en WhatsApp para atención al cliente 24/7 con GPT-4.",
+      "domain": "chatbot-ai.railway.app",
+      "problem": "Empresa sin capacidad de atención al cliente fuera de horario laboral perdía el 40% de consultas entrantes.",
+      "solution": "Bot con n8n + OpenAI GPT-4 entrenado con base de conocimiento propia. Escalamiento automático a agente humano cuando es necesario.",
+      "results": "🤖 70% consultas resueltas sin intervención · Atención 24/7",
+      "tech": "n8n, OpenAI API, WhatsApp API, Node.js, Supabase"
+    },
+    "project5": {
+      "title": "Sistema RPA Empresarial",
+      "description": "Automatización de procesos de reporting y gestión de datos que antes requerían trabajo manual extensivo.",
+      "domain": "rpa-system.internal",
+      "problem": "El equipo financiero generaba reportes manualmente en Excel durante 8 horas diarias con alto riesgo de error humano.",
+      "solution": "Bot RPA con Power Automate y Rocketbot que extrae datos de múltiples fuentes, procesa, valida y genera reportes automáticamente.",
+      "results": "⚙️ Proceso de 8h → 15 min · Precisión del 100%",
+      "tech": "Power Automate, Rocketbot, Excel API, SQL Server, Python"
+    },
+    "project6": {
+      "title": "Portal Inmobiliario Moderno",
+      "description": "Plataforma de búsqueda y gestión de propiedades con mapas interactivos y filtros avanzados en tiempo real.",
+      "domain": "propiedades-web.vercel.app",
+      "problem": "Portal legacy con tiempos de carga de 7 segundos, sin filtros dinámicos y con UX anticuada que ahuyentaba leads.",
+      "solution": "Reescritura completa con React + Astro SSG, integración de Mapbox para mapas interactivos y sistema de filtros sin recarga de página.",
+      "results": "🏠 Carga -60% · Leads +85% · UX score 92/100",
+      "tech": "React, Astro, Mapbox GL, TypeScript, REST API, Algolia"
+    }
+  },
+  "automation": {
+    "title": "Automatización & IA",
+    "description": "La automatización no es solo una herramienta, es una mentalidad. Aplico pensamiento de sistemas para identificar procesos repetitivos y crear soluciones que escalan.",
+    "n8n_title": "Flujos con n8n",
+    "n8n_desc": "Diseño e implemento flujos de automatización complejos que conectan múltiples servicios y APIs. Desde procesamiento de datos hasta notificaciones inteligentes.",
+    "rpa_title": "RPA Enterprise",
+    "rpa_desc": "Experiencia con Rocketbot y Power Automate para automatizar procesos empresariales que involucran sistemas legacy, Excel, y plataformas internas.",
+    "ai_title": "Integración de IA",
+    "ai_desc": "Utilizo modelos de IA para potenciar automatizaciones: clasificación de documentos, generación de contenido, análisis de datos, y vibe coding para acelerar desarrollo.",
+    "impact_title": "Impacto Real",
+    "impact1": "+500 horas ahorradas mensualmente en procesos automatizados",
+    "impact2": "Integración de +20 servicios y APIs diferentes",
+    "impact3": "Reducción del 90% en errores manuales"
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "role1": {
+      "title": "Frontend Engineer Senior",
+      "period": "2023 - Presente",
+      "type": "Empresa de tecnología",
+      "description": "Liderazgo técnico del desarrollo frontend de plataformas web de alto tráfico. Arquitectura de componentes, optimización de performance, e implementación de sistemas de design.",
+      "highlights": ["Arquitectura frontend escalable para +10K usuarios", "Optimización de Core Web Vitals", "Mentoring de desarrolladores junior", "CI/CD y testing automatizado"]
+    },
+    "role2": {
+      "title": "Desarrollador Frontend & Automatización",
+      "period": "2021 - 2023",
+      "type": "Agencia digital",
+      "description": "Desarrollo de aplicaciones web y sistemas de automatización para múltiples clientes. Gestión de proyectos de principio a fin con enfoque en UX y rendimiento.",
+      "highlights": ["Desarrollo de +15 proyectos web en producción", "Implementación de flujos de automatización con n8n", "Integración de RPA con Power Automate", "Reducción de tiempos de entrega en 40%"]
+    },
+    "role3": {
+      "title": "Desarrollador Web Full-Stack",
+      "period": "2019 - 2021",
+      "type": "Startup tecnológica",
+      "description": "Desarrollo full-stack de aplicaciones web, desde el diseño de interfaces hasta la implementación de APIs. Primeros pasos en automatización y optimización de procesos.",
+      "highlights": ["Desarrollo de MVPs y prototipos funcionales", "WordPress y Shopify para clientes", "Primeras automatizaciones con scripts", "Bases de UX/UI research"]
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¿Tienes un proyecto en mente o buscas un Frontend Engineer? Hablemos.",
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "or": "O encuéntrame en",
+    "calendly": "Agendar reunión"
+  },
+  "cv": {
+    "download": "Descargar CV",
+    "es": "CV en Español",
+    "en": "CV en Inglés"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "built": "Construido con Astro, React y GSAP"
+  }
+}

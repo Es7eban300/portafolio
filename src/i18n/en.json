@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "about": "About",
+    "stack": "Stack",
+    "projects": "Projects",
+    "automation": "Automation",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Frontend Engineer building scalable and automated systems.",
+    "description": "I build modern, scalable, and high-performance interfaces. I combine advanced frontend with automation and AI to create solutions that drive real impact.",
+    "cta_projects": "View Projects",
+    "cta_contact": "Get in Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "I'm a Frontend Engineer with experience building complex web applications in production. My approach goes beyond code: I design scalable architectures, optimize user experiences, and automate processes to maximize impact.",
+    "p2": "I have solid experience with React, Astro, and modern JavaScript/TypeScript ecosystems. I've led the frontend development of platforms handling thousands of users, always prioritizing performance, accessibility, and maintainability.",
+    "p3": "What sets me apart is my hybrid capability: I combine high-level frontend development with automation (n8n, RPA, Power Automate) and AI integration. This allows me to build complete solutions that solve real business problems.",
+    "highlight1_title": "Advanced Frontend",
+    "highlight1_desc": "React, Astro, TypeScript, scalable architectures",
+    "highlight2_title": "UX Mindset",
+    "highlight2_desc": "User-centered design, optimized performance",
+    "highlight3_title": "Automation & AI",
+    "highlight3_desc": "n8n, RPA, Power Automate, AI integration"
+  },
+  "stack": {
+    "title": "Tech Stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "automation": "Automation",
+    "ai": "AI & Tools",
+    "cms": "CMS & Platforms"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "problem": "Problem",
+    "solution": "Solution",
+    "results": "Results",
+    "visit": "View Project",
+    "project1": {
+      "title": "Headless E-commerce Platform",
+      "description": "High-performance online store with headless architecture handling massive traffic spikes.",
+      "domain": "ecommerce-pro.vercel.app",
+      "problem": "The client needed a fast online store capable of handling traffic spikes of 10K+ simultaneous users without performance degradation.",
+      "solution": "Headless architecture with Astro on the frontend, REST API backend, and smart caching with incremental revalidation for product pages.",
+      "results": "⚡ Load time 4.2s → 0.8s · Conversion +35% · CWV green",
+      "tech": "Astro, React, TypeScript, REST API, CDN, SSG"
+    },
+    "project2": {
+      "title": "Automation Dashboard",
+      "description": "Centralized control panel for monitoring and managing enterprise automation flows in real time.",
+      "domain": "auto-dashboard.netlify.app",
+      "problem": "The company managed 50+ automation flows without centralized visibility, causing silent failures and data loss.",
+      "solution": "React dashboard with real-time flow visualization, smart alerts, and automatic restart. Direct n8n API integration.",
+      "results": "🔥 Failure detection -80% · Zero downtime for 6 months",
+      "tech": "React, TypeScript, n8n API, WebSockets, Chart.js"
+    },
+    "project3": {
+      "title": "Smart Multichannel CMS",
+      "description": "Centralized system to manage and distribute content across multiple platforms simultaneously.",
+      "domain": "cms-multicanal.app",
+      "problem": "The content team was manually updating 4 different platforms, consuming 20+ hours per week with constant sync errors.",
+      "solution": "React frontend with n8n automations that distribute content to WordPress, Shopify, and social media automatically.",
+      "results": "🚀 From 20h → 3h weekly · Zero synchronization errors",
+      "tech": "React, n8n, WordPress API, Shopify API, Node.js"
+    },
+    "project4": {
+      "title": "WhatsApp AI Chatbot",
+      "description": "Intelligent conversational assistant integrated into WhatsApp for 24/7 customer support powered by GPT-4.",
+      "domain": "chatbot-ai.railway.app",
+      "problem": "Company with no after-hours customer support was losing 40% of incoming queries outside business hours.",
+      "solution": "Bot built with n8n + OpenAI GPT-4 trained on a custom knowledge base. Auto-escalation to human agent when needed.",
+      "results": "🤖 70% queries resolved automatically · 24/7 coverage",
+      "tech": "n8n, OpenAI API, WhatsApp API, Node.js, Supabase"
+    },
+    "project5": {
+      "title": "Enterprise RPA System",
+      "description": "Process automation for reporting and data management that previously required extensive manual work.",
+      "domain": "rpa-system.internal",
+      "problem": "The finance team spent 8 hours daily generating Excel reports manually, with high risk of human error.",
+      "solution": "RPA bot with Power Automate and Rocketbot that extracts data from multiple sources, processes, validates, and generates reports automatically.",
+      "results": "⚙️ 8h process → 15 min · 100% accuracy achieved",
+      "tech": "Power Automate, Rocketbot, Excel API, SQL Server, Python"
+    },
+    "project6": {
+      "title": "Modern Real Estate Portal",
+      "description": "Property search and management platform with interactive maps and real-time advanced filters.",
+      "domain": "propiedades-web.vercel.app",
+      "problem": "Legacy portal with 7-second load times, no dynamic filters, and outdated UX that was driving leads away.",
+      "solution": "Full rewrite with React + Astro SSG, Mapbox integration for interactive maps, and a filter system with no page reloads.",
+      "results": "🏠 Load time -60% · Leads +85% · UX score 92/100",
+      "tech": "React, Astro, Mapbox GL, TypeScript, REST API, Algolia"
+    }
+  },
+  "automation": {
+    "title": "Automation & AI",
+    "description": "Automation isn't just a tool, it's a mindset. I apply systems thinking to identify repetitive processes and create solutions that scale.",
+    "n8n_title": "n8n Workflows",
+    "n8n_desc": "I design and implement complex automation workflows that connect multiple services and APIs. From data processing to smart notifications.",
+    "rpa_title": "Enterprise RPA",
+    "rpa_desc": "Experience with Rocketbot and Power Automate for automating enterprise processes involving legacy systems, Excel, and internal platforms.",
+    "ai_title": "AI Integration",
+    "ai_desc": "I use AI models to power automations: document classification, content generation, data analysis, and vibe coding to accelerate development.",
+    "impact_title": "Real Impact",
+    "impact1": "500+ hours saved monthly on automated processes",
+    "impact2": "Integration of 20+ different services and APIs",
+    "impact3": "90% reduction in manual errors"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "role1": {
+      "title": "Senior Frontend Engineer",
+      "period": "2023 - Present",
+      "type": "Technology company",
+      "description": "Technical leadership of frontend development for high-traffic web platforms. Component architecture, performance optimization, and design system implementation.",
+      "highlights": ["Scalable frontend architecture for 10K+ users", "Core Web Vitals optimization", "Junior developer mentoring", "CI/CD and automated testing"]
+    },
+    "role2": {
+      "title": "Frontend Developer & Automation",
+      "period": "2021 - 2023",
+      "type": "Digital agency",
+      "description": "Web application development and automation systems for multiple clients. End-to-end project management with focus on UX and performance.",
+      "highlights": ["15+ production web projects developed", "Automation workflow implementation with n8n", "RPA integration with Power Automate", "40% reduction in delivery times"]
+    },
+    "role3": {
+      "title": "Full-Stack Web Developer",
+      "period": "2019 - 2021",
+      "type": "Tech startup",
+      "description": "Full-stack development of web applications, from interface design to API implementation. First steps in automation and process optimization.",
+      "highlights": ["MVP and functional prototype development", "WordPress and Shopify for clients", "First automation scripts", "UX/UI research foundations"]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Have a project in mind or looking for a Frontend Engineer? Let's talk.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "or": "Or find me at",
+    "calendly": "Schedule a meeting"
+  },
+  "cv": {
+    "download": "Download CV",
+    "es": "CV in Spanish",
+    "en": "CV in English"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built": "Built with Astro, React & GSAP"
+  }
+}

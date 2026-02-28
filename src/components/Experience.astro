@@ -1,0 +1,162 @@
+---
+import type { Lang } from '../i18n/utils';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i18n = getTranslations(lang);
+const exp = i18n.experience;
+
+const roles = [exp.role1, exp.role2, exp.role3];
+---
+
+<section class="section" id="experience">
+  <div class="container">
+    <h2 class="section-title reveal">{exp.title}</h2>
+    <div class="timeline">
+      {roles.map((role, i) => (
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            {i < roles.length - 1 && <div class="timeline-line"></div>}
+          </div>
+          <div class="timeline-content card">
+            <div class="timeline-header">
+              <h3 class="role-title">{role.title}</h3>
+              <span class="role-period">{role.period}</span>
+            </div>
+            <span class="role-type">{role.type}</span>
+            <p class="role-description">{role.description}</p>
+            <ul class="role-highlights">
+              {role.highlights.map((h: string) => (
+                <li>{h}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 48px;
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 32px;
+  }
+
+  .timeline-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .timeline-dot {
+    width: 16px;
+    height: 16px;
+    background: var(--crimson);
+    border-radius: 50%;
+    border: 3px solid var(--bg-primary);
+    box-shadow: 0 0 0 2px var(--crimson);
+    flex-shrink: 0;
+    margin-top: 20px;
+  }
+
+  .timeline-line {
+    width: 2px;
+    flex: 1;
+    background: var(--border);
+    min-height: 20px;
+  }
+
+  .timeline-content {
+    flex: 1;
+    margin-bottom: 24px;
+  }
+
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .role-title {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+  }
+
+  .role-period {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--cobalt-light);
+    font-weight: 600;
+    padding: 4px 12px;
+    background: var(--cobalt-subtle);
+    border: 1px solid var(--border-blue);
+    border-radius: var(--radius-sm);
+  }
+
+  .role-type {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .role-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .role-highlights {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .role-highlights li {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .timeline {
+      padding-left: 0;
+    }
+
+    .timeline-marker {
+      display: none;
+    }
+
+    .timeline-item {
+      gap: 0;
+    }
+
+    .timeline-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

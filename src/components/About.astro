@@ -1,0 +1,95 @@
+---
+import type { Lang } from '../i18n/utils';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i18n = getTranslations(lang);
+const about = i18n.about;
+
+const highlights = [
+  { title: about.highlight1_title, desc: about.highlight1_desc, icon: '⚡' },
+  { title: about.highlight2_title, desc: about.highlight2_desc, icon: '🎯' },
+  { title: about.highlight3_title, desc: about.highlight3_desc, icon: '🤖' },
+];
+---
+
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title reveal">{about.title}</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="reveal">{about.p1}</p>
+        <p class="reveal">{about.p2}</p>
+        <p class="reveal">{about.p3}</p>
+      </div>
+      <div class="about-highlights">
+        {highlights.map((h) => (
+          <div class="highlight-card card reveal">
+            <span class="highlight-icon">{h.icon}</span>
+            <h3 class="highlight-title">{h.title}</h3>
+            <p class="highlight-desc">{h.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-text p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .highlight-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .highlight-icon {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+  }
+
+  .highlight-title {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+  }
+
+  .highlight-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+</style>
