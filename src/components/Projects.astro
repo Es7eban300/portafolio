@@ -22,7 +22,7 @@ const { lang } = Astro.props;
 const i18n = getTranslations(lang);
 const p = i18n.projects;
 
-const fallbackProjects: Project[] = [
+const projects: Project[] = [
   p.project1,
   p.project2,
   p.project3,
@@ -31,88 +31,19 @@ const fallbackProjects: Project[] = [
   p.project6,
 ];
 
-const featuredEsProjects: Project[] = [
-  {
-    title: 'Plataforma E-commerce',
-    description:
-      'Tienda online de alto rendimiento con arquitectura headless capaz de manejar grandes picos de tráfico.',
-    domain: 'demofiestamaniamockdata.vercel.app',
-    problem:
-      'La operación necesitaba escalar durante campañas y fechas especiales sin caídas ni bloqueos en checkout.',
-    solution:
-      'Implementación con Next.js, PostgreSQL y Prisma, más caching por capas, prefetch inteligente y optimización de consultas críticas.',
-    results: 'Checkout estable en picos altos · Navegación rápida · Base sólida para crecimiento',
-    tech: 'Next.js, PostgreSQL, Prisma, TypeScript, Vercel',
-    link: 'https://demofiestamaniamockdata.vercel.app/',
-    image: '/projects/01-ecommerce.webp',
-  },
-  {
-    title: 'Generador de contexto para periodistas',
-    description:
-      'Crawler para medios de comunicación que construye contexto editorial para redactores con enfoque de investigación.',
-    domain: 'Preview privado',
-    problem:
-      'El redactor perdía tiempo buscando antecedentes y conexiones entre actores, hechos y publicaciones.',
-    solution:
-      'Pipeline de crawling y enriquecimiento semántico que genera grafo de relaciones, timeline, relacionados y propuestas SEO.',
-    results: 'Investigación más rápida · Mayor contexto por nota · Flujo editorial asistido',
-    tech: 'Node.js, NLP, Graph DB, SEO tooling',
-    image: '/projects/02-contexto-periodistas.webp',
-  },
-  {
-    title: 'Astro + WordPress Headless',
-    description:
-      'Renovación de portal WordPress manteniendo wp-admin para el equipo editorial y migrando el frontend a una experiencia veloz.',
-    domain: 'Preview privado',
-    problem:
-      'El portal existente era lento y el equipo no quería perder el flujo habitual de publicación en WordPress.',
-    solution:
-      'Arquitectura headless: contenido desde WordPress y frontend en Astro, priorizando rendimiento y continuidad operativa.',
-    results: 'Mejor tiempo de carga · Misma operación editorial · UX más moderna',
-    tech: 'Astro, WordPress Headless, REST API, JavaScript',
-    image: '/projects/03-astro-wordpress.webp',
-  },
-  {
-    title: 'Pigasus',
-    description:
-      'E-commerce para restaurante en Medellín con operación conectada desde pago hasta preparación en cocina.',
-    domain: 'pigasus.com.co',
-    problem:
-      'Se requería digitalizar pedidos con flujo completo: pago, gestión interna y seguimiento del usuario final.',
-    solution:
-      'Tienda en WordPress con integración de pasarela, enrutamiento interno de pedidos a cocina y tracker de estado.',
-    results: 'Pedidos centralizados · Menos fricción operativa · Mejor visibilidad para cliente',
-    tech: 'WordPress, WooCommerce, Pasarela de pago, Integraciones',
-    link: 'https://pigasus.com.co/',
-    image: '/projects/04-pigasus.webp',
-  },
-  {
-    title: p.project5.title,
-    description: p.project5.description,
-    domain: p.project5.domain,
-    problem: p.project5.problem,
-    solution: p.project5.solution,
-    results: p.project5.results,
-    tech: p.project5.tech,
-    image: '/projects/05-proyecto-actual.webp',
-  },
-  {
-    title: 'Proyectos internos',
-    description:
-      'Colección de proyectos donde empecé: principalmente WordPress, más implementaciones en HTML, CSS y JavaScript.',
-    domain: 'elcolombiano.com',
-    problem:
-      'Necesidad de construir soluciones funcionales con recursos limitados, ganando bases técnicas en proyectos reales.',
-    solution:
-      'Iteración continua de sitios y especiales digitales con enfoque práctico, aprendiendo estructura web y calidad de entrega.',
-    results: 'Base técnica sólida · Evolución profesional visible · Alto volumen de aprendizaje',
-    tech: 'WordPress, HTML, CSS, JavaScript',
-    link: 'https://www.elcolombiano.com/especialesmarcasaliadas/',
-    image: '/projects/06-internos.webp',
-  },
-];
+const getProjectLink = (project: Project): string | undefined => {
+  if (project.link) return project.link;
+  if (!project.domain) return undefined;
 
-const projects = lang === 'es' ? featuredEsProjects : fallbackProjects;
+  const domain = project.domain.toLowerCase();
+  if (domain.includes('preview privado') || domain.includes('private preview')) {
+    return undefined;
+  }
+  if (project.domain.startsWith('http://') || project.domain.startsWith('https://')) {
+    return project.domain;
+  }
+  return `https://${project.domain}`;
+};
 
 // Visual themes per project: gradient + icon + glow color
 const themes = [
@@ -173,11 +104,13 @@ const themes = [
     </div>
 
     <div class="projects-grid">
-      {projects.map((proj, i) => (
-        <article
-          class="project-card"
-          style={`--card-accent: ${themes[i].accent}; --card-glow: ${themes[i].glow}; --card-border: ${themes[i].border};`}
-        >
+      {projects.map((proj, i) => {
+        const projectLink = getProjectLink(proj);
+        return (
+          <article
+            class="project-card"
+            style={`--card-accent: ${themes[i].accent}; --card-glow: ${themes[i].glow}; --card-border: ${themes[i].border};`}
+          >
           <!-- Card header: domain badge -->
           <div class="card-header">
             <div class="domain-badge">
@@ -256,9 +189,9 @@ const themes = [
 
           <!-- CTA button -->
           <div class="card-footer">
-            {proj.link ? (
+            {projectLink ? (
               <a
-                href={proj.link}
+                href={projectLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="card-cta"
@@ -277,8 +210,9 @@ const themes = [
               </button>
             )}
           </div>
-        </article>
-      ))}
+          </article>
+        );
+      })}
     </div>
   </div>
 </section>

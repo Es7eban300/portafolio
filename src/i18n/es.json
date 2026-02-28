@@ -36,62 +36,71 @@
   "projects": {
     "title": "Proyectos Destacados",
     "problem": "Problema",
-    "solution": "Solución",
+    "solution": "Soluci?n",
     "results": "Resultados",
     "visit": "Ver Proyecto",
     "project1": {
-      "title": "Plataforma E-commerce Headless",
-      "description": "Tienda online de alto rendimiento con arquitectura headless capaz de manejar grandes picos de tráfico.",
-      "domain": "ecommerce-pro.vercel.app",
-      "problem": "El cliente necesitaba una tienda online rápida que pudiera manejar picos de tráfico de +10K usuarios simultáneos sin degradación de performance.",
-      "solution": "Arquitectura headless con Astro en el frontend, API REST para el backend, y sistema de caché inteligente con revalidación incremental.",
-      "results": "⚡ Carga de 4.2s → 0.8s · Conversión +35% · CWV verde",
-      "tech": "Astro, React, TypeScript, REST API, CDN, SSG"
+      "title": "Plataforma E-commerce",
+      "description": "Tienda online de alto rendimiento con arquitectura headless capaz de manejar grandes picos de tr?fico.",
+      "domain": "demofiestamaniamockdata.vercel.app",
+      "problem": "La operaci?n necesitaba escalar durante campa?as y fechas especiales sin ca?das ni bloqueos en checkout.",
+      "solution": "Implementaci?n con Next.js, PostgreSQL y Prisma, m?s caching por capas, prefetch inteligente y optimizaci?n de consultas cr?ticas.",
+      "results": "Checkout estable en picos altos ? Navegaci?n r?pida ? Base s?lida para crecimiento",
+      "tech": "Next.js, PostgreSQL, Prisma, TypeScript, Vercel",
+      "link": "https://demofiestamaniamockdata.vercel.app/",
+      "image": "/projects/01-ecommerce.webp"
     },
     "project2": {
-      "title": "Dashboard de Automatización",
-      "description": "Panel de control centralizado para monitorear y gestionar flujos de automatización empresariales en tiempo real.",
-      "domain": "auto-dashboard.netlify.app",
-      "problem": "La empresa gestionaba +50 flujos de automatización sin visibilidad centralizada, causando fallos silenciosos y pérdida de datos.",
-      "solution": "Dashboard en React con visualización en tiempo real, alertas inteligentes y sistema de reinicio automático integrado con n8n API.",
-      "results": "🔥 Detección de fallos -80% · Zero downtime por 6 meses",
-      "tech": "React, TypeScript, n8n API, WebSockets, Chart.js"
+      "title": "Generador de contexto para periodistas",
+      "description": "Crawler para medios de comunicaci?n que construye contexto editorial para redactores con enfoque de investigaci?n.",
+      "domain": "Preview privado",
+      "problem": "El redactor perd?a tiempo buscando antecedentes y conexiones entre actores, hechos y publicaciones.",
+      "solution": "Pipeline de crawling y enriquecimiento sem?ntico que genera grafo de relaciones, timeline, relacionados y propuestas SEO.",
+      "results": "Investigaci?n m?s r?pida ? Mayor contexto por nota ? Flujo editorial asistido",
+      "tech": "Node.js, NLP, Graph DB, SEO tooling",
+      "image": "/projects/02-contexto-periodistas.webp"
     },
     "project3": {
-      "title": "CMS Multicanal Inteligente",
-      "description": "Sistema centralizado para gestionar y distribuir contenido en múltiples plataformas simultáneamente.",
-      "domain": "cms-multicanal.app",
-      "problem": "El equipo de contenido actualizaba manualmente 4 plataformas diferentes, consumiendo más de 20 horas semanales.",
-      "solution": "Frontend React centralizado con automatizaciones n8n que distribuyen contenido a WordPress, Shopify y redes sociales automáticamente.",
-      "results": "🚀 De 20h → 3h semanales · Cero errores de sincronización",
-      "tech": "React, n8n, WordPress API, Shopify API, Node.js"
+      "title": "Astro + WordPress Headless",
+      "description": "Renovaci?n de un portal hecho en WordPress para conservar wp-admin y modernizar el frontend con mejor performance.",
+      "domain": "Preview privado",
+      "problem": "El portal existente era lento y el equipo no quer?a perder el flujo habitual de publicaci?n en WordPress.",
+      "solution": "Arquitectura headless: contenido desde WordPress y frontend en Astro, priorizando rendimiento y continuidad operativa.",
+      "results": "Mejor tiempo de carga ? Misma operaci?n editorial ? UX m?s moderna",
+      "tech": "Astro, WordPress Headless, REST API, JavaScript",
+      "image": "/projects/03-astro-wordpress.webp"
     },
     "project4": {
-      "title": "Bot WhatsApp con IA",
-      "description": "Asistente conversacional inteligente integrado en WhatsApp para atención al cliente 24/7 con GPT-4.",
-      "domain": "chatbot-ai.railway.app",
-      "problem": "Empresa sin capacidad de atención al cliente fuera de horario laboral perdía el 40% de consultas entrantes.",
-      "solution": "Bot con n8n + OpenAI GPT-4 entrenado con base de conocimiento propia. Escalamiento automático a agente humano cuando es necesario.",
-      "results": "🤖 70% consultas resueltas sin intervención · Atención 24/7",
-      "tech": "n8n, OpenAI API, WhatsApp API, Node.js, Supabase"
+      "title": "Pigasus",
+      "description": "E-commerce para restaurante en Medell?n con operaci?n conectada desde pago hasta preparaci?n en cocina.",
+      "domain": "pigasus.com.co",
+      "problem": "Se requer?a digitalizar pedidos con flujo completo: pago, gesti?n interna y seguimiento del usuario final.",
+      "solution": "Tienda en WordPress con integraci?n de pasarela, enrutamiento interno de pedidos a cocina y tracker de estado.",
+      "results": "Pedidos centralizados ? Menos fricci?n operativa ? Mejor visibilidad para cliente",
+      "tech": "WordPress, WooCommerce, Pasarela de pago, Integraciones",
+      "link": "https://pigasus.com.co/",
+      "image": "/projects/04-pigasus.webp"
     },
     "project5": {
       "title": "Sistema RPA Empresarial",
-      "description": "Automatización de procesos de reporting y gestión de datos que antes requerían trabajo manual extensivo.",
-      "domain": "rpa-system.internal",
+      "description": "Automatizaci?n de procesos de reporting y gesti?n de datos que antes requer?an trabajo manual extensivo.",
+      "domain": "Preview privado",
       "problem": "El equipo financiero generaba reportes manualmente en Excel durante 8 horas diarias con alto riesgo de error humano.",
-      "solution": "Bot RPA con Power Automate y Rocketbot que extrae datos de múltiples fuentes, procesa, valida y genera reportes automáticamente.",
-      "results": "⚙️ Proceso de 8h → 15 min · Precisión del 100%",
-      "tech": "Power Automate, Rocketbot, Excel API, SQL Server, Python"
+      "solution": "Bot RPA con Power Automate y Rocketbot que extrae datos de m?ltiples fuentes, procesa, valida y genera reportes autom?ticamente.",
+      "results": "Proceso de 8h ? 15 min ? Precisi?n del 100%",
+      "tech": "Power Automate, Rocketbot, Excel API, SQL Server, Python",
+      "image": "/projects/05-proyecto-actual.webp"
     },
     "project6": {
-      "title": "Portal Inmobiliario Moderno",
-      "description": "Plataforma de búsqueda y gestión de propiedades con mapas interactivos y filtros avanzados en tiempo real.",
-      "domain": "propiedades-web.vercel.app",
-      "problem": "Portal legacy con tiempos de carga de 7 segundos, sin filtros dinámicos y con UX anticuada que ahuyentaba leads.",
-      "solution": "Reescritura completa con React + Astro SSG, integración de Mapbox para mapas interactivos y sistema de filtros sin recarga de página.",
-      "results": "🏠 Carga -60% · Leads +85% · UX score 92/100",
-      "tech": "React, Astro, Mapbox GL, TypeScript, REST API, Algolia"
+      "title": "Proyectos internos",
+      "description": "Colecci?n de proyectos donde empec?: principalmente WordPress, m?s implementaciones en HTML, CSS y JavaScript.",
+      "domain": "elcolombiano.com",
+      "problem": "Necesidad de construir soluciones funcionales con recursos limitados, ganando bases t?cnicas en proyectos reales.",
+      "solution": "Iteraci?n continua de sitios y especiales digitales con enfoque pr?ctico, aprendiendo estructura web y calidad de entrega.",
+      "results": "Base t?cnica s?lida ? Evoluci?n profesional visible ? Alto volumen de aprendizaje",
+      "tech": "WordPress, HTML, CSS, JavaScript",
+      "link": "https://www.elcolombiano.com/especialesmarcasaliadas/",
+      "image": "/projects/06-internos.webp"
     }
   },
   "automation": {
@@ -111,25 +120,64 @@
   "experience": {
     "title": "Experiencia Profesional",
     "role1": {
-      "title": "Frontend Engineer Senior",
-      "period": "2023 - Presente",
-      "type": "Empresa de tecnología",
-      "description": "Liderazgo técnico del desarrollo frontend de plataformas web de alto tráfico. Arquitectura de componentes, optimización de performance, e implementación de sistemas de design.",
-      "highlights": ["Arquitectura frontend escalable para +10K usuarios", "Optimización de Core Web Vitals", "Mentoring de desarrolladores junior", "CI/CD y testing automatizado"]
+      "title": "Grupo El Colombiano / Desarrollador Fullstack",
+      "period": "2021 - Actual",
+      "type": "Empresa de comunicaciones - Medellín",
+      "description": "Me desempeño como desarrollador web enfocado en Frontend y Backend, participando activamente en la construcción y mantenimiento de sitios web y aplicaciones interactivas. Mi rol abarca desde la escritura de código limpio y escalable hasta la implementación de soluciones técnicas orientadas al rendimiento y la experiencia del usuario. Durante este tiempo adquirí una experiencia sólida trabajando con sistemas de gestión de contenido, especialmente WordPress, tanto en su modalidad tradicional como en arquitectura headless. Esto me permitió integrar el CMS con tecnologías modernas, optimizando la entrega de contenido y facilitando su administración por parte de usuarios no técnicos.",
+      "highlights": [
+        "Desarrollo Frontend y Backend para sitios y aplicaciones interactivas",
+        "Implementación de código escalable orientado a rendimiento y UX",
+        "Integración de WordPress tradicional y headless con frontend moderno",
+        "Optimización de entrega de contenido para equipos editoriales"
+      ]
     },
     "role2": {
-      "title": "Desarrollador Frontend & Automatización",
-      "period": "2021 - 2023",
-      "type": "Agencia digital",
-      "description": "Desarrollo de aplicaciones web y sistemas de automatización para múltiples clientes. Gestión de proyectos de principio a fin con enfoque en UX y rendimiento.",
-      "highlights": ["Desarrollo de +15 proyectos web en producción", "Implementación de flujos de automatización con n8n", "Integración de RPA con Power Automate", "Reducción de tiempos de entrega en 40%"]
+      "title": "Trabajo Freelance",
+      "period": "2021 - Actual",
+      "type": "Consultor y desarrollador",
+      "description": "Implementación y personalización de tiendas online en Shopify, WordPress y VTEX, incluyendo la configuración de pasarelas de pago, métodos de envío y catálogos de productos. También optimizo la experiencia de usuario (UX), el rendimiento de las tiendas y la integración de herramientas de marketing y analítica para mejorar la gestión y los resultados del comercio electrónico.",
+      "highlights": [
+        "Implementación de tiendas online en Shopify, WordPress y VTEX",
+        "Configuración de pasarelas de pago, envíos y catálogos de productos",
+        "Optimización de UX y performance para e-commerce",
+        "Integración de marketing y analítica para mejorar conversión"
+      ]
     },
     "role3": {
-      "title": "Desarrollador Web Full-Stack",
-      "period": "2019 - 2021",
-      "type": "Startup tecnológica",
-      "description": "Desarrollo full-stack de aplicaciones web, desde el diseño de interfaces hasta la implementación de APIs. Primeros pasos en automatización y optimización de procesos.",
-      "highlights": ["Desarrollo de MVPs y prototipos funcionales", "WordPress y Shopify para clientes", "Primeras automatizaciones con scripts", "Bases de UX/UI research"]
+      "title": "Grupo El Colombiano",
+      "period": "JUL 2021 - NOV 2021",
+      "type": "Analista Funcional",
+      "description": "Me desempeñé como especificador de necesidades y soluciones informáticas, así como responsable último del desarrollo, prueba, implantación y entrenamiento a usuarios de los sistemas generados.",
+      "highlights": [
+        "Levantamiento y especificación de requerimientos funcionales",
+        "Diseño de soluciones informáticas alineadas al negocio",
+        "Coordinación de desarrollo, pruebas e implantación de sistemas",
+        "Capacitación de usuarios finales y acompañamiento operativo"
+      ]
+    },
+    "role4": {
+      "title": "Grupo El Colombiano",
+      "period": "ENE 2021 - JUL 2021",
+      "type": "Practicante Universitario",
+      "description": "Me desempeñé como el encargado de SEO y performance de los sitios web de la compañía, a su vez era encargado de recibir requerimientos y funcionalidades generadas en los sitios que variaban según necesidades especificas y la naturaleza del sitio (La mayoría de estos sitios web están construidos en Wordpress)",
+      "highlights": [
+        "Mejora de SEO técnico y performance en portales web",
+        "Implementación de funcionalidades según requerimientos del negocio",
+        "Mantenimiento y evolución de sitios construidos en WordPress",
+        "Gestión de tickets y prioridades con foco en calidad de entrega"
+      ]
+    },
+    "role5": {
+      "title": "Emtelco CX&BPO",
+      "period": "SEP 2018 – AGO 2019",
+      "type": "Soporte Técnico",
+      "description": "Me desempeñé proporcionando asistencia y soluciones a los usuarios que enfrentaban problemas técnicos con productos, servicios y sistemas asociados a la marca TIGO, fui profesional capacitado que trabajé en el ámbito de la tecnología.",
+      "highlights": [
+        "Soporte técnico a usuarios de productos y servicios TIGO",
+        "Diagnóstico y resolución de incidencias en múltiples canales",
+        "Documentación de casos y seguimiento hasta cierre efectivo",
+        "Atención orientada a servicio, tiempos de respuesta y calidad"
+      ]
     }
   },
   "contact": {

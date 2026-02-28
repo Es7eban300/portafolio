@@ -9,6 +9,7 @@
 
   /* === INDEPENDIENTE MEDELLÍN === */
   --crimson: #C8102E;
+  --green: #7FB23A;
   --crimson-light: #E8173A;
   --crimson-dark: #8B0C20;
   --crimson-glow: rgba(200, 16, 46, 0.28);
@@ -307,4 +308,6 @@ button {
   .section-title {
     font-size: clamp(2.2rem, 8vw, 3rem);
   }
+
+ 
 }

@@ -34,7 +34,7 @@ const i18n = getTranslations(lang);
 
       <!-- Name display - jersey style -->
       <div class="hero-identity reveal">
-        <span class="jersey-number" aria-hidden="true">10</span>
+        <span class="jersey-number" aria-hidden="true">17</span>
         <div class="hero-name-block">
           <span class="hero-firstname glitch" data-text="ESTEBAN">ESTEBAN</span>
           <span class="hero-lastname">CASTRO</span>
@@ -138,7 +138,7 @@ const i18n = getTranslations(lang);
           <pre><code><span class="t-keyword">const</span> <span class="t-var">esteban</span> = {`{`}
   <span class="t-comment">// ⚽ Fiel al DIM desde siempre</span>
   <span class="t-prop">team</span>:       <span class="t-string">'Independiente Medellín'</span>,
-  <span class="t-prop">jersey</span>:     <span class="t-number">10</span>,
+  <span class="t-prop">jersey</span>:     <span class="t-number">17</span>,
 
   <span class="t-comment">// 🎮 Level 99 Developer</span>
   <span class="t-prop">stack</span>:      [<span class="t-string">'React'</span>, <span class="t-string">'Astro'</span>, <span class="t-string">'n8n'</span>],
@@ -163,10 +163,7 @@ const i18n = getTranslations(lang);
     </div>
   </div>
 
-  <!-- Scroll indicator -->
-  <div class="hero-scroll-indicator" aria-hidden="true">
-    <div class="scroll-line"></div>
-  </div>
+
 </section>
 
 <style>
@@ -280,7 +277,7 @@ const i18n = getTranslations(lang);
   .live-dot {
     width: 8px;
     height: 8px;
-    background: var(--crimson);
+    background: var(--green);
     border-radius: 50%;
     animation: livePulse 1.5s ease-in-out infinite;
     flex-shrink: 0;
@@ -502,8 +499,14 @@ const i18n = getTranslations(lang);
     position: absolute;
     top: 14px;
     margin-left: 2px;
+    left: 30px;
   }
 
+  @media screen and (max-width: 648px){
+    .stat-plus{
+      left: 20px;
+    }
+  }
   .stat-label {
     font-family: var(--font-heading);
     font-size: 0.7rem;
@@ -530,6 +533,8 @@ const i18n = getTranslations(lang);
     gap: 16px;
     min-height: 420px;
   }
+
+  
 
   .hero-orb {
     position: absolute;
@@ -694,34 +699,6 @@ const i18n = getTranslations(lang);
     color: var(--text-primary);
   }
 
-  /* === SCROLL INDICATOR === */
-  .hero-scroll-indicator {
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-  }
-
-  .scroll-line {
-    width: 2px;
-    height: 44px;
-    background: var(--border);
-    position: relative;
-    overflow: hidden;
-    border-radius: 1px;
-  }
-
-  .scroll-line::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(to bottom, transparent, var(--crimson));
-    animation: scrollDown 2s ease-in-out infinite;
-  }
-
   @keyframes scrollDown {
     0% { top: -50%; }
     100% { top: 150%; }
@@ -788,4 +765,11 @@ const i18n = getTranslations(lang);
       padding: 16px;
     }
   }
+
+  @media screen and (max-width: 648px){
+    .achievement-card{
+      display: none!important;
+    }
+  }
+
 </style>

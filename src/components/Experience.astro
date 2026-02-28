@@ -10,7 +10,18 @@ const { lang } = Astro.props;
 const i18n = getTranslations(lang);
 const exp = i18n.experience;
 
-const roles = [exp.role1, exp.role2, exp.role3];
+interface ExperienceRole {
+  title: string;
+  period: string;
+  type: string;
+  description: string;
+  highlights: string[];
+}
+
+const roles = Object.entries(exp)
+  .filter(([key, value]) => key.startsWith('role') && value && typeof value === 'object')
+  .sort(([a], [b]) => Number(a.replace('role', '')) - Number(b.replace('role', '')))
+  .map(([, value]) => value as ExperienceRole);
 ---
 
 <section class="section" id="experience">

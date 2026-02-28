@@ -40,58 +40,67 @@
     "results": "Results",
     "visit": "View Project",
     "project1": {
-      "title": "Headless E-commerce Platform",
-      "description": "High-performance online store with headless architecture handling massive traffic spikes.",
-      "domain": "ecommerce-pro.vercel.app",
-      "problem": "The client needed a fast online store capable of handling traffic spikes of 10K+ simultaneous users without performance degradation.",
-      "solution": "Headless architecture with Astro on the frontend, REST API backend, and smart caching with incremental revalidation for product pages.",
-      "results": "⚡ Load time 4.2s → 0.8s · Conversion +35% · CWV green",
-      "tech": "Astro, React, TypeScript, REST API, CDN, SSG"
+      "title": "E-commerce Platform",
+      "description": "High-performance online store with a headless architecture designed to handle major traffic spikes.",
+      "domain": "demofiestamaniamockdata.vercel.app",
+      "problem": "Operations needed to scale during campaigns and peak seasons without checkout failures or slowdowns.",
+      "solution": "Built with Next.js, PostgreSQL, and Prisma, plus layered caching, smart prefetching, and optimized critical queries.",
+      "results": "Stable checkout under high peaks ? Fast navigation ? Solid foundation for growth",
+      "tech": "Next.js, PostgreSQL, Prisma, TypeScript, Vercel",
+      "link": "https://demofiestamaniamockdata.vercel.app/",
+      "image": "/projects/01-ecommerce.webp"
     },
     "project2": {
-      "title": "Automation Dashboard",
-      "description": "Centralized control panel for monitoring and managing enterprise automation flows in real time.",
-      "domain": "auto-dashboard.netlify.app",
-      "problem": "The company managed 50+ automation flows without centralized visibility, causing silent failures and data loss.",
-      "solution": "React dashboard with real-time flow visualization, smart alerts, and automatic restart. Direct n8n API integration.",
-      "results": "🔥 Failure detection -80% · Zero downtime for 6 months",
-      "tech": "React, TypeScript, n8n API, WebSockets, Chart.js"
+      "title": "Context Generator for Journalists",
+      "description": "Media crawler that builds editorial context for writers with an investigative workflow.",
+      "domain": "Private preview",
+      "problem": "Writers were losing time searching for background and connections between actors, events, and publications.",
+      "solution": "Crawling and semantic enrichment pipeline that generates relationship graphs, timelines, related content, and SEO suggestions.",
+      "results": "Faster research ? Better context per article ? Assisted editorial workflow",
+      "tech": "Node.js, NLP, Graph DB, SEO tooling",
+      "image": "/projects/02-contexto-periodistas.webp"
     },
     "project3": {
-      "title": "Smart Multichannel CMS",
-      "description": "Centralized system to manage and distribute content across multiple platforms simultaneously.",
-      "domain": "cms-multicanal.app",
-      "problem": "The content team was manually updating 4 different platforms, consuming 20+ hours per week with constant sync errors.",
-      "solution": "React frontend with n8n automations that distribute content to WordPress, Shopify, and social media automatically.",
-      "results": "🚀 From 20h → 3h weekly · Zero synchronization errors",
-      "tech": "React, n8n, WordPress API, Shopify API, Node.js"
+      "title": "Astro + WordPress Headless",
+      "description": "WordPress portal modernization keeping wp-admin while moving the frontend to a faster experience.",
+      "domain": "Private preview",
+      "problem": "The existing portal was slow, and the editorial team needed to keep their usual WordPress publishing flow.",
+      "solution": "Headless architecture: content served from WordPress and frontend rebuilt with Astro, prioritizing performance and operational continuity.",
+      "results": "Improved load time ? Same editorial workflow ? Better UX",
+      "tech": "Astro, WordPress Headless, REST API, JavaScript",
+      "image": "/projects/03-astro-wordpress.webp"
     },
     "project4": {
-      "title": "WhatsApp AI Chatbot",
-      "description": "Intelligent conversational assistant integrated into WhatsApp for 24/7 customer support powered by GPT-4.",
-      "domain": "chatbot-ai.railway.app",
-      "problem": "Company with no after-hours customer support was losing 40% of incoming queries outside business hours.",
-      "solution": "Bot built with n8n + OpenAI GPT-4 trained on a custom knowledge base. Auto-escalation to human agent when needed.",
-      "results": "🤖 70% queries resolved automatically · 24/7 coverage",
-      "tech": "n8n, OpenAI API, WhatsApp API, Node.js, Supabase"
+      "title": "Pigasus",
+      "description": "Restaurant e-commerce in Medellin with an end-to-end operation from payment to kitchen execution.",
+      "domain": "pigasus.com.co",
+      "problem": "The business needed full digital order flow: payment, internal processing, and user tracking.",
+      "solution": "WordPress commerce setup with payment gateway integration, direct kitchen order routing, and order status tracker.",
+      "results": "Centralized orders ? Less operational friction ? Better customer visibility",
+      "tech": "WordPress, WooCommerce, Payment Gateway, Integrations",
+      "link": "https://pigasus.com.co/",
+      "image": "/projects/04-pigasus.webp"
     },
     "project5": {
       "title": "Enterprise RPA System",
-      "description": "Process automation for reporting and data management that previously required extensive manual work.",
-      "domain": "rpa-system.internal",
-      "problem": "The finance team spent 8 hours daily generating Excel reports manually, with high risk of human error.",
-      "solution": "RPA bot with Power Automate and Rocketbot that extracts data from multiple sources, processes, validates, and generates reports automatically.",
-      "results": "⚙️ 8h process → 15 min · 100% accuracy achieved",
-      "tech": "Power Automate, Rocketbot, Excel API, SQL Server, Python"
+      "description": "Automation for reporting and data management processes that previously required extensive manual work.",
+      "domain": "Private preview",
+      "problem": "The finance team spent 8 hours daily building Excel reports with high risk of human error.",
+      "solution": "RPA bot with Power Automate and Rocketbot that extracts, processes, validates, and generates reports automatically.",
+      "results": "8h process ? 15 min ? 100% accuracy",
+      "tech": "Power Automate, Rocketbot, Excel API, SQL Server, Python",
+      "image": "/projects/05-proyecto-actual.webp"
     },
     "project6": {
-      "title": "Modern Real Estate Portal",
-      "description": "Property search and management platform with interactive maps and real-time advanced filters.",
-      "domain": "propiedades-web.vercel.app",
-      "problem": "Legacy portal with 7-second load times, no dynamic filters, and outdated UX that was driving leads away.",
-      "solution": "Full rewrite with React + Astro SSG, Mapbox integration for interactive maps, and a filter system with no page reloads.",
-      "results": "🏠 Load time -60% · Leads +85% · UX score 92/100",
-      "tech": "React, Astro, Mapbox GL, TypeScript, REST API, Algolia"
+      "title": "Internal Projects",
+      "description": "Collection of projects where I started: mostly WordPress, plus implementations in HTML, CSS, and JavaScript.",
+      "domain": "elcolombiano.com",
+      "problem": "Need to build functional solutions with limited resources while strengthening core technical foundations through real projects.",
+      "solution": "Continuous delivery of sites and digital specials with a practical mindset, improving web structure and implementation quality over time.",
+      "results": "Strong technical foundation ? Visible professional growth ? High learning volume",
+      "tech": "WordPress, HTML, CSS, JavaScript",
+      "link": "https://www.elcolombiano.com/especialesmarcasaliadas/",
+      "image": "/projects/06-internos.webp"
     }
   },
   "automation": {
@@ -111,25 +120,64 @@
   "experience": {
     "title": "Professional Experience",
     "role1": {
-      "title": "Senior Frontend Engineer",
-      "period": "2023 - Present",
-      "type": "Technology company",
-      "description": "Technical leadership of frontend development for high-traffic web platforms. Component architecture, performance optimization, and design system implementation.",
-      "highlights": ["Scalable frontend architecture for 10K+ users", "Core Web Vitals optimization", "Junior developer mentoring", "CI/CD and automated testing"]
+      "title": "Grupo El Colombiano / Full-Stack Developer",
+      "period": "2021 - Present",
+      "type": "Media company - Medellin",
+      "description": "I work as a web developer focused on frontend and backend, actively participating in the build and maintenance of websites and interactive applications. My role includes writing clean, scalable code and implementing technical solutions focused on performance and user experience. During this period, I gained strong experience with content management systems, especially WordPress, both in traditional mode and headless architecture. This allowed me to integrate CMS workflows with modern technologies, improving content delivery and making administration easier for non-technical users.",
+      "highlights": [
+        "Frontend and backend development for websites and interactive apps",
+        "Scalable code implementation focused on performance and UX",
+        "Integration of traditional and headless WordPress with modern frontend",
+        "Content delivery optimization for editorial teams"
+      ]
     },
     "role2": {
-      "title": "Frontend Developer & Automation",
-      "period": "2021 - 2023",
-      "type": "Digital agency",
-      "description": "Web application development and automation systems for multiple clients. End-to-end project management with focus on UX and performance.",
-      "highlights": ["15+ production web projects developed", "Automation workflow implementation with n8n", "RPA integration with Power Automate", "40% reduction in delivery times"]
+      "title": "Freelance Work",
+      "period": "2021 - Present",
+      "type": "Consultant and developer",
+      "description": "Implementation and customization of online stores in Shopify, WordPress, and VTEX, including payment gateway setup, shipping methods, and product catalogs. I also optimize user experience (UX), store performance, and marketing/analytics integrations to improve e-commerce management and outcomes.",
+      "highlights": [
+        "Online store implementation in Shopify, WordPress, and VTEX",
+        "Payment gateways, shipping setup, and product catalog configuration",
+        "UX and performance optimization for e-commerce platforms",
+        "Marketing and analytics integrations to improve conversion"
+      ]
     },
     "role3": {
-      "title": "Full-Stack Web Developer",
-      "period": "2019 - 2021",
-      "type": "Tech startup",
-      "description": "Full-stack development of web applications, from interface design to API implementation. First steps in automation and process optimization.",
-      "highlights": ["MVP and functional prototype development", "WordPress and Shopify for clients", "First automation scripts", "UX/UI research foundations"]
+      "title": "Grupo El Colombiano",
+      "period": "JUL 2021 - NOV 2021",
+      "type": "Functional Analyst",
+      "description": "I worked as a requirements and IT solutions specifier, and as the final owner of development, testing, deployment, and user training for implemented systems.",
+      "highlights": [
+        "Requirements gathering and functional specification",
+        "Design of business-aligned IT solutions",
+        "Coordination of development, testing, and deployment",
+        "End-user training and operational support"
+      ]
+    },
+    "role4": {
+      "title": "Grupo El Colombiano",
+      "period": "JAN 2021 - JUL 2021",
+      "type": "University Intern",
+      "description": "I was responsible for SEO and performance across company websites. I also handled incoming requirements and feature requests that varied depending on each site's purpose and technical context (most of these websites were built with WordPress).",
+      "highlights": [
+        "Technical SEO and performance improvements across web portals",
+        "Feature implementation based on business requirements",
+        "Maintenance and evolution of WordPress-based websites",
+        "Ticket and priority management focused on delivery quality"
+      ]
+    },
+    "role5": {
+      "title": "Emtelco CX&BPO",
+      "period": "SEP 2018 - AUG 2019",
+      "type": "Technical Support",
+      "description": "I provided technical assistance and solutions for users facing issues with products, services, and systems associated with the TIGO brand, working in a high-volume technology support environment.",
+      "highlights": [
+        "Technical support for TIGO products and services",
+        "Issue diagnosis and resolution across multiple channels",
+        "Case documentation and follow-up until effective closure",
+        "Service-oriented support with response-time and quality focus"
+      ]
     }
   },
   "contact": {
