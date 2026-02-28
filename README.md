@@ -1,43 +1,49 @@
-# Astro Starter Kit: Minimal
+# 🚀 Esteban Castro — Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+**Desarrollador enfocado en Frontend & Full-Stack con mentalidad de producto.**  
+Construyo experiencias rápidas, limpias y pensadas para escalar.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🌐 Live Portfolio
 
-Inside of your Astro project, you'll see the following folders and files:
+🔗 [Ver Portfolio](https://portafolio-lilac-three-86.vercel.app/)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+---
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🧱 Stack Principal
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Astro  
+- TypeScript  
+- CSS (custom styling)  
+- Deploy con Vercel  
+- Git + GitHub  
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## 🎯 Enfoque
 
-All commands are run from the root of the project, from a terminal:
+Me especializo en:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Arquitectura frontend limpia y mantenible  
+- Migraciones de WordPress a stacks modernos  
+- Integración de IA y automatización en productos digitales  
+- Optimización de performance y UX  
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📌 Proyectos Destacados
+
+Próximamente estaré publicando proyectos adicionales en Next.js y Astro con modo demo público.
+
+### ⚡ Proyecto Next.js (Full-Stack demo)
+
+### 🧩 Proyecto Astro (Landing optimizada)
+
+---
+
+## 🛠 Desarrollo Local
+
+```bash
+npm install
+npm run dev
