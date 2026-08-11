@@ -8,22 +8,22 @@
     "contact": "Contacto"
   },
   "hero": {
-    "headline": "Frontend Engineer building scalable and automated systems.",
-    "description": "Desarrollo interfaces modernas, escalables y de alto rendimiento. Combino frontend avanzado con automatización e IA para crear soluciones que generan impacto real.",
+    "headline": "Desarrollador Frontend e Ingeniero de IA aplicada.",
+    "description": "Lidero la estrategia de Inteligencia Artificial de una compañía de medios de más de 300 empleados, diseñando e implementando sistemas de IA en producción. Combino una base sólida en desarrollo frontend con ingeniería de sistemas de IA: RAG, pipelines de datos, automatización e infraestructura.",
     "cta_projects": "Ver Proyectos",
     "cta_contact": "Contactar"
   },
   "about": {
     "title": "Sobre Mí",
-    "p1": "Soy un Frontend Engineer con experiencia construyendo aplicaciones web complejas en producción. Mi enfoque va más allá del código: diseño arquitecturas escalables, optimizo experiencias de usuario y automatizo procesos para maximizar el impacto.",
-    "p2": "Tengo experiencia sólida en React, Astro, y ecosistemas JavaScript/TypeScript modernos. He liderado el desarrollo frontend de plataformas que manejan miles de usuarios, siempre priorizando performance, accesibilidad y mantenibilidad.",
-    "p3": "Lo que me diferencia es mi capacidad híbrida: combino desarrollo frontend de alto nivel con automatización (n8n, RPA, Power Automate) e integración de IA. Esto me permite construir soluciones completas que resuelven problemas reales de negocio.",
-    "highlight1_title": "Frontend Avanzado",
-    "highlight1_desc": "React, Astro, TypeScript, arquitecturas escalables",
-    "highlight2_title": "UX Mindset",
-    "highlight2_desc": "Diseño centrado en el usuario, performance optimizada",
-    "highlight3_title": "Automatización & IA",
-    "highlight3_desc": "n8n, RPA, Power Automate, integración de IA"
+    "p1": "Soy desarrollador con experiencia en frontend de más de 6 años que evolucionó hacia el liderazgo técnico de IA empresarial. Hoy dirijo la adopción de Inteligencia Artificial dentro de un grupo de medios de más de 300 empleados: defino la estrategia, construyo las herramientas y establezco el marco de gobernanza bajo el cual la organización usa IA de forma segura.",
+    "p2": "Mi trabajo no se queda en la experimentación. Diseño arquitecturas, integro modelos con sistemas internos, despliego en servidores de producción y documento cada decisión. Entiendo tanto el código como el contexto de negocio, y esa combinación es la que convierte una idea de IA en un sistema del que la empresa depende.",
+    "p3": "No me defino solo como desarrollador ni solo como estratega. Estoy en la intersección: entiendo la ingeniería lo suficiente para construir sistemas que funcionan, y el negocio lo suficiente para que esos sistemas resuelvan problemas que importan.",
+    "highlight1_title": "Ingeniería de IA aplicada",
+    "highlight1_desc": "Sistemas RAG, integración de LLMs, pipelines de procesamiento, embeddings y búsqueda semántica",
+    "highlight2_title": "Arquitectura e infraestructura",
+    "highlight2_desc": "Diseño de sistemas, despliegue en producción, APIs (FastAPI), bases de datos vectoriales",
+    "highlight3_title": "Desarrollo Frontend",
+    "highlight3_desc": "Interfaces de usuario, tracking y analítica (GA4, GTM), integración de propiedades digitales"
   },
   "stack": {
     "title": "Stack Tecnológico",
@@ -40,6 +40,47 @@
     "results": "Resultados",
     "visit": "Ver Proyecto",
     "project1": {
+      "title": "Contextualizador — La memoria del medio",
+      "description": "Sistema RAG en producción de recuperación semántica sobre el archivo histórico de la publicación. Permite a los periodistas consultar en lenguaje natural décadas de contenido y recuperar contexto relevante al instante.",
+      "domain": "Preview privado",
+      "problem": "El conocimiento del medio existía en su archivo histórico, pero era inaccesible bajo demanda: los periodistas no podían recuperar contexto relevante cuando lo necesitaban.",
+      "solution": "Arquitectura RAG completa: ingesta y chunking del archivo, vectorización con embeddings locales, búsqueda por similitud y generación contextualizada. Alcance acotado al corpus del medio y embeddings locales para independencia de servicios externos de vectorización.",
+      "results": "Consulta en lenguaje natural de décadas de archivo · Contexto editorial al instante · Independencia de servicios externos",
+      "tech": "sentence-transformers, ChromaDB, FastAPI, Claude API",
+      "image": "/projects/contextualizador.png"
+    }, 
+    "project2": {
+      "title": "Semáforo IA — Gobernanza de datos",
+      "description": "Clasificador de gobernanza en producción que determina, antes de que cualquier dato salga de la organización hacia un servicio externo de IA, si ese envío es seguro, con un veredicto claro tipo semáforo.",
+      "domain": "Preview privado",
+      "problem": "La decisión de riesgo (legal, de cumplimiento, reputacional) sobre enviar datos a servicios externos de IA se tomaba de forma inconsistente.",
+      "solution": "Sistema que convierte esa decisión de riesgo en una respuesta automatizada y consistente. Evaluación de hosting local para resolver la contradicción de fondo: no tiene sentido enviar datos a un servicio externo para preguntar si esos datos pueden enviarse a un servicio externo.",
+      "results": "Decisión de riesgo automatizada y consistente · Veredicto claro tipo semáforo · Datos protegidos antes de salir",
+      "tech": "Claude API, Arquitectura de clasificación, Despliegue en producción",
+      "image": "/projects/semaforo.png"
+      
+    },
+    "project3": {
+      "title": "Pipeline de transcripción de entrevistas",
+      "description": "Pipeline de procesamiento audio-a-texto que convierte audio de entrevistas periodísticas en transcripciones limpias y estructuradas, combinando reconocimiento de voz con post-procesamiento por LLM.",
+      "domain": "Preview privado",
+      "problem": "La transcripción manual de entrevistas es una de las tareas más costosas en tiempo del trabajo periodístico.",
+      "solution": "Automatización que combina reconocimiento de voz (Whisper) con post-procesamiento por LLM para limpieza y organización, entregando transcripciones limpias y estructuradas.",
+      "results": "Transcripciones limpias y estructuradas · Elimina una tarea manual costosa · Flujo periodístico acelerado",
+      "tech": "Whisper, Claude API, Orquestación de pipeline",
+      "image": "/projects/transcriptor.png"
+    },
+    "project4": {
+      "title": "Infraestructura de campañas outbound — WhatsApp Business",
+      "description": "Habilitación end-to-end del canal de marketing outbound de la compañía. Lideré la evaluación y selección del proveedor de WhatsApp Business (BSP), diseñé la arquitectura de flujos de campaña e implementé la automatización.",
+      "domain": "Preview privado",
+      "problem": "La compañía no contaba con un canal de marketing outbound habilitado ni con un proceso formal para seleccionar el proveedor de WhatsApp Business.",
+      "solution": "Selección de BSP mediante una rúbrica comparativa formal con criterios de onboarding (API-only frente a Coexistence según el estado de la cuenta), diseño de flujos de campaña, automatización e integración con la API de medios para la creación y el envío de mensajes.",
+      "results": "Canal outbound habilitado end-to-end · Proveedor seleccionado con rúbrica formal · Envío de campañas automatizado",
+      "tech": "BSP (WhatsApp Business API), n8n, Automatización de flujos, Media API",
+      "image": "/projects/Outbound.png"
+    },
+    "project5": {
       "title": "Plataforma E-commerce",
       "description": "Tienda online de alto rendimiento con arquitectura headless capaz de manejar grandes picos de tráfico.",
       "domain": "demofiestamaniamockdata.vercel.app",
@@ -50,17 +91,7 @@
       "link": "https://demofiestamaniamockdata.vercel.app/",
       "image": "/projects/01-ecommerce.webp"
     },
-    "project2": {
-      "title": "Generador de contexto para periodistas",
-      "description": "Crawler para medios de comunicación que construye contexto editorial para redactores con enfoque de investigación.",
-      "domain": "Preview privado",
-      "problem": "El redactor perdía tiempo buscando antecedentes y conexiones entre actores, hechos y publicaciones.",
-      "solution": "Pipeline de crawling y enriquecimiento semántico que genera grafo de relaciones, timeline, relacionados y propuestas SEO.",
-      "results": "Investigación más rápida · Mayor contexto por nota · Flujo editorial asistido",
-      "tech": "Node.js, NLP, Graph DB, SEO tooling",
-      "image": "/projects/02-contexto-periodistas.webp"
-    },
-    "project3": {
+    "project6": {
       "title": "Astro + WordPress Headless",
       "description": "Renovación de un portal hecho en WordPress para conservar wp-admin y modernizar el frontend con mejor performance.",
       "domain": "Preview privado",
@@ -70,7 +101,7 @@
       "tech": "Astro, WordPress Headless, REST API, JavaScript",
       "image": "/projects/03-astro-wordpress.webp"
     },
-    "project4": {
+    "project7": {
       "title": "Pigasus",
       "description": "E-commerce para restaurante en Medellín con operación conectada desde pago hasta preparación en cocina.",
       "domain": "pigasus.com.co",
@@ -81,7 +112,7 @@
       "link": "https://pigasus.com.co/",
       "image": "/projects/04-pigasus.webp"
     },
-    "project5": {
+    "project8": {
       "title": "Sistema RPA Empresarial",
       "description": "Automatización de procesos de reporting y gestión de datos que antes requerían trabajo manual extensivo.",
       "domain": "Preview privado",
@@ -91,7 +122,7 @@
       "tech": "Power Automate, Rocketbot, Excel API, SQL Server, Python",
       "image": "/projects/05-proyecto-actual.webp"
     },
-    "project6": {
+    "project9": {
       "title": "Proyectos internos",
       "description": "Colección de proyectos donde empecé: principalmente WordPress, más implementaciones en HTML, CSS y JavaScript.",
       "domain": "elcolombiano.com",
@@ -119,6 +150,19 @@
   },
   "experience": {
     "title": "Experiencia Profesional",
+    "role0": {
+      "title": "Líder Técnico IA",
+      "period": "Enero 2026 - Actual",
+      "type": "Grupo de medios (más de 300 empleados)",
+      "description": "Dirijo la estrategia de adopción de Inteligencia Artificial de la organización, diseñando, construyendo y desplegando sistemas de IA en producción, y estableciendo el marco de gobernanza para su uso seguro.",
+      "highlights": [
+        "Dirijo la estrategia de adopción de Inteligencia Artificial de la organización",
+        "Diseño, construyo y despliego sistemas de IA en producción (RAG, clasificación, pipelines, automatización)",
+        "Establezco el marco de gobernanza para el uso seguro de IA y clasificación de riesgo de datos",
+        "Lidero la formación interna y la adopción de herramientas de IA entre equipos",
+        "Actúo como autoridad técnica de referencia en IA dentro de la compañía"
+      ]
+    },
     "role1": {
       "title": "Grupo El Colombiano / Desarrollador Fullstack",
       "period": "2021 - Actual",

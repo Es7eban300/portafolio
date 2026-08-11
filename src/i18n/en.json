@@ -8,22 +8,22 @@
     "contact": "Contact"
   },
   "hero": {
-    "headline": "Frontend Engineer building scalable and automated systems.",
-    "description": "I build modern, scalable, and high-performance interfaces. I combine advanced frontend with automation and AI to create solutions that drive real impact.",
+    "headline": "Frontend Developer & Applied AI Engineer.",
+    "description": "I lead the Artificial Intelligence strategy of a media company with 300+ employees, designing and deploying AI systems in production. I combine a solid frontend foundation with AI systems engineering: RAG, data pipelines, automation, and infrastructure.",
     "cta_projects": "View Projects",
     "cta_contact": "Get in Touch"
   },
   "about": {
     "title": "About Me",
-    "p1": "I'm a Frontend Engineer with experience building complex web applications in production. My approach goes beyond code: I design scalable architectures, optimize user experiences, and automate processes to maximize impact.",
-    "p2": "I have solid experience with React, Astro, and modern JavaScript/TypeScript ecosystems. I've led the frontend development of platforms handling thousands of users, always prioritizing performance, accessibility, and maintainability.",
-    "p3": "What sets me apart is my hybrid capability: I combine high-level frontend development with automation (n8n, RPA, Power Automate) and AI integration. This allows me to build complete solutions that solve real business problems.",
-    "highlight1_title": "Advanced Frontend",
-    "highlight1_desc": "React, Astro, TypeScript, scalable architectures",
-    "highlight2_title": "UX Mindset",
-    "highlight2_desc": "User-centered design, optimized performance",
-    "highlight3_title": "Automation & AI",
-    "highlight3_desc": "n8n, RPA, Power Automate, AI integration"
+    "p1": "I'm a developer with 6+ years of frontend experience who evolved into technical leadership of enterprise AI. Today I lead the adoption of Artificial Intelligence within a media group of 300+ employees: I define the strategy, build the tools, and establish the governance framework under which the organization uses AI safely.",
+    "p2": "My work doesn't stop at experimentation. I design architectures, integrate models with internal systems, deploy on production servers, and document every decision. I understand both the code and the business context, and that combination is what turns an AI idea into a system the company depends on.",
+    "p3": "I don't define myself only as a developer or only as a strategist. I sit at the intersection: I understand engineering well enough to build systems that work, and business well enough to make those systems solve problems that matter.",
+    "highlight1_title": "Applied AI Engineering",
+    "highlight1_desc": "RAG systems, LLM integration, processing pipelines, embeddings and semantic search",
+    "highlight2_title": "Architecture & Infrastructure",
+    "highlight2_desc": "System design, production deployment, APIs (FastAPI), vector databases",
+    "highlight3_title": "Frontend Development",
+    "highlight3_desc": "User interfaces, tracking and analytics (GA4, GTM), digital property integration"
   },
   "stack": {
     "title": "Tech Stack",
@@ -40,6 +40,46 @@
     "results": "Results",
     "visit": "View Project",
     "project1": {
+      "title": "Contextualizer — The Medium's Memory",
+      "description": "Production RAG system for semantic retrieval over the publication's historical archive. It lets journalists query decades of content in natural language and instantly retrieve relevant context.",
+      "domain": "Private preview",
+      "problem": "The medium's knowledge existed in its historical archive but was inaccessible on demand: journalists couldn't retrieve relevant context when they needed it.",
+      "solution": "Complete RAG architecture: archive ingestion and chunking, vectorization with local embeddings, similarity search, and contextualized generation. Scope limited to the medium's corpus and local embeddings for independence from external vectorization services.",
+      "results": "Natural-language querying of decades of archive · Instant editorial context · Independence from external services",
+      "tech": "sentence-transformers, ChromaDB, FastAPI, Claude API",
+      "image": "/projects/contextualizador.png"
+    },
+    "project2": {
+      "title": "AI Traffic Light — Data Governance",
+      "description": "Production governance classifier that determines, before any data leaves the organization toward an external AI service, whether that transfer is safe, with a clear traffic-light verdict.",
+      "domain": "Private preview",
+      "problem": "The risk decision (legal, compliance, reputational) about sending data to external AI services was being made inconsistently.",
+      "solution": "A system that turns that risk decision into an automated, consistent answer. Local hosting was evaluated to resolve the core contradiction: it makes no sense to send data to an external service to ask whether that data can be sent to an external service.",
+      "results": "Automated, consistent risk decision · Clear traffic-light verdict · Data protected before it leaves",
+      "tech": "Claude API, Classification architecture, Production deployment",
+      "image": "/projects/semaforo.png"
+    },
+    "project3": {
+      "title": "Interview Transcription Pipeline",
+      "description": "Audio-to-text processing pipeline that turns journalistic interview audio into clean, structured transcriptions, combining speech recognition with LLM post-processing.",
+      "domain": "Private preview",
+      "problem": "Manual interview transcription is one of the most time-consuming tasks in journalistic work.",
+      "solution": "Automation that combines speech recognition (Whisper) with LLM post-processing for cleanup and organization, delivering clean, structured transcriptions.",
+      "results": "Clean, structured transcriptions · Removes a costly manual task · Faster journalistic workflow",
+      "tech": "Whisper, Claude API, Pipeline orchestration",
+      "image": "/projects/transcriptor.png"
+    },
+    "project4": {
+      "title": "Outbound Campaign Infrastructure — WhatsApp Business",
+      "description": "End-to-end enablement of the company's outbound marketing channel. I led the evaluation and selection of the WhatsApp Business provider (BSP), designed the campaign flow architecture, and implemented the automation.",
+      "domain": "Private preview",
+      "problem": "The company had no enabled outbound marketing channel and no formal process to select its WhatsApp Business provider.",
+      "solution": "BSP selection via a formal comparative rubric with onboarding criteria (API-only vs. Coexistence depending on account status), campaign flow design, automation, and integration with the media API for message creation and sending.",
+      "results": "Outbound channel enabled end-to-end · Provider selected with a formal rubric · Automated campaign sending",
+      "tech": "BSP (WhatsApp Business API), n8n, Workflow automation, Media API",
+      "image": "/projects/Outbound.png"
+    },
+    "project5": {
       "title": "E-commerce Platform",
       "description": "High-performance online store with a headless architecture designed to handle major traffic spikes.",
       "domain": "demofiestamaniamockdata.vercel.app",
@@ -50,17 +90,7 @@
       "link": "https://demofiestamaniamockdata.vercel.app/",
       "image": "/projects/01-ecommerce.webp"
     },
-    "project2": {
-      "title": "Context Generator for Journalists",
-      "description": "Media crawler that builds editorial context for writers with an investigative workflow.",
-      "domain": "Private preview",
-      "problem": "Writers were losing time searching for background and connections between actors, events, and publications.",
-      "solution": "Crawling and semantic enrichment pipeline that generates relationship graphs, timelines, related content, and SEO suggestions.",
-      "results": "Faster research · Better context per article · Assisted editorial workflow",
-      "tech": "Node.js, NLP, Graph DB, SEO tooling",
-      "image": "/projects/02-contexto-periodistas.webp"
-    },
-    "project3": {
+    "project6": {
       "title": "Astro + WordPress Headless",
       "description": "WordPress portal modernization keeping wp-admin while moving the frontend to a faster experience.",
       "domain": "Private preview",
@@ -70,7 +100,7 @@
       "tech": "Astro, WordPress Headless, REST API, JavaScript",
       "image": "/projects/03-astro-wordpress.webp"
     },
-    "project4": {
+    "project7": {
       "title": "Pigasus",
       "description": "Restaurant e-commerce in Medellin with an end-to-end operation from payment to kitchen execution.",
       "domain": "pigasus.com.co",
@@ -81,7 +111,7 @@
       "link": "https://pigasus.com.co/",
       "image": "/projects/04-pigasus.webp"
     },
-    "project5": {
+    "project8": {
       "title": "Enterprise RPA System",
       "description": "Automation for reporting and data management processes that previously required extensive manual work.",
       "domain": "Private preview",
@@ -91,7 +121,7 @@
       "tech": "Power Automate, Rocketbot, Excel API, SQL Server, Python",
       "image": "/projects/05-proyecto-actual.webp"
     },
-    "project6": {
+    "project9": {
       "title": "Internal Projects",
       "description": "Collection of projects where I started: mostly WordPress, plus implementations in HTML, CSS, and JavaScript.",
       "domain": "elcolombiano.com",
@@ -119,6 +149,19 @@
   },
   "experience": {
     "title": "Professional Experience",
+    "role0": {
+      "title": "AI Technical Lead",
+      "period": "January 2026 - August 2026",
+      "type": "Media group (300+ employees)",
+      "description": "I lead the organization's Artificial Intelligence adoption strategy, designing, building, and deploying AI systems in production, and establishing the governance framework for their safe use.",
+      "highlights": [
+        "I lead the organization's Artificial Intelligence adoption strategy",
+        "I design, build, and deploy AI systems in production (RAG, classification, pipelines, automation)",
+        "I establish the governance framework for safe AI use and data risk classification",
+        "I lead internal training and AI tool adoption across teams",
+        "I act as the reference technical authority on AI within the company"
+      ]
+    },
     "role1": {
       "title": "Grupo El Colombiano / Full-Stack Developer",
       "period": "2021 - Present",

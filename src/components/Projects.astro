@@ -29,7 +29,11 @@ const projects: Project[] = [
   p.project4,
   p.project5,
   p.project6,
-];
+  p.project7,
+  p.project8,
+  p.project9,
+  p.project10,
+].filter((project): project is Project => Boolean(project));
 
 const getProjectLink = (project: Project): string | undefined => {
   if (project.link) return project.link;
@@ -89,6 +93,34 @@ const themes = [
     glow: 'rgba(59, 130, 246, 0.25)',
     border: 'rgba(59, 130, 246, 0.35)',
   },
+  {
+    gradient: 'linear-gradient(135deg, #8B5CF622 0%, #1D4ED818 100%)',
+    icon: '🧠',
+    accent: '#8B5CF6',
+    glow: 'rgba(139, 92, 246, 0.25)',
+    border: 'rgba(139, 92, 246, 0.35)',
+  },
+  {
+    gradient: 'linear-gradient(135deg, #10B98118 0%, #F59E0B1A 100%)',
+    icon: '🚦',
+    accent: '#10B981',
+    glow: 'rgba(16, 185, 129, 0.25)',
+    border: 'rgba(16, 185, 129, 0.35)',
+  },
+  {
+    gradient: 'linear-gradient(135deg, #00D4FF18 0%, #1D4ED822 100%)',
+    icon: '🎙️',
+    accent: '#00A6C0',
+    glow: 'rgba(0, 166, 192, 0.25)',
+    border: 'rgba(0, 166, 192, 0.35)',
+  },
+  {
+    gradient: 'linear-gradient(135deg, #25D36618 0%, #10B98118 100%)',
+    icon: '💬',
+    accent: '#25D366',
+    glow: 'rgba(37, 211, 102, 0.25)',
+    border: 'rgba(37, 211, 102, 0.35)',
+  },
 ];
 ---
 
@@ -117,7 +149,7 @@ const themes = [
               <span class="domain-dot"></span>
               <span class="domain-text">{proj.domain}</span>
             </div>
-            <div class="card-number">0{i + 1}</div>
+            <div class="card-number">{String(i + 1).padStart(2, '0')}</div>
           </div>
 
           <!-- Visual area -->
