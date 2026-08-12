@@ -47,7 +47,8 @@
       "solution": "Complete RAG architecture: archive ingestion and chunking, vectorization with local embeddings, similarity search, and contextualized generation. Scope limited to the medium's corpus and local embeddings for independence from external vectorization services.",
       "results": "Natural-language querying of decades of archive · Instant editorial context · Independence from external services",
       "tech": "sentence-transformers, ChromaDB, FastAPI, Claude API",
-      "image": "/projects/contextualizador.png"
+      "image": "/projects/contextualizador.png",
+      "gallery": ["/projects/contextualizador/context1.png", "/projects/contextualizador/context2.png", "/projects/contextualizador/context3.png", "/projects/contextualizador/context4.png"]
     },
     "project2": {
       "title": "AI Traffic Light — Data Governance",
@@ -67,7 +68,8 @@
       "solution": "Automation that combines speech recognition (Whisper) with LLM post-processing for cleanup and organization, delivering clean, structured transcriptions.",
       "results": "Clean, structured transcriptions · Removes a costly manual task · Faster journalistic workflow",
       "tech": "Whisper, Claude API, Pipeline orchestration",
-      "image": "/projects/transcriptor.png"
+      "image": "/projects/transcriptor.png",
+      "gallery": ["/projects/transcriptor/transcriptor1.png", "/projects/transcriptor/transcriptor2.png", "/projects/transcriptor/transcriptor3.png", "/projects/transcriptor/transcriptor4.png"]
     },
     "project4": {
       "title": "Outbound Campaign Infrastructure — WhatsApp Business",
@@ -98,7 +100,8 @@
       "solution": "Headless architecture: content served from WordPress and frontend rebuilt with Astro, prioritizing performance and operational continuity.",
       "results": "Improved load time · Same editorial workflow · Better UX",
       "tech": "Astro, WordPress Headless, REST API, JavaScript",
-      "image": "/projects/03-astro-wordpress.webp"
+      "image": "/projects/03-astro-wordpress.webp",
+      "gallery": ["/projects/intelecto/intelecto 1.png", "/projects/intelecto/intelecto 2.png", "/projects/intelecto/intelecto 3.png"]
     },
     "project7": {
       "title": "Pigasus",
